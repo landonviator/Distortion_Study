@@ -40,40 +40,39 @@ public:
     }
 };
 
-class DiodeClipperAudioProcessorEditor  : public juce::AudioProcessorEditor, juce::Slider::Listener
+class ViatorDiodeClipperAudioProcessorEditor  : public juce::AudioProcessorEditor, juce::Slider::Listener
 {
 public:
-    DiodeClipperAudioProcessorEditor (DiodeClipperAudioProcessor&);
-    ~DiodeClipperAudioProcessorEditor() override;
+    ViatorDiodeClipperAudioProcessorEditor (ViatorDiodeClipperAudioProcessor&);
+    ~ViatorDiodeClipperAudioProcessorEditor() override;
 
     //==============================================================================
     void paint (juce::Graphics&) override;
     void resized() override;
     void sliderValueChanged(juce::Slider* slider) override;
 
-
 private:
     
-    juce::Slider thermalVoltageSlider, emissionCoefficientSlider, saturationCurrentSlider;
+    juce::Slider inputSlider, driveSlider, trimSlider;
     std::vector<juce::Slider*> sliders;
     
-    juce::Slider thermalVoltageSliderTrack, emissionCoefficientSliderTrack, saturationCurrentSliderTrack;
+    juce::Slider inputSliderTrack, driveSliderTrack, trimSliderTrack;
     std::vector<juce::Slider*> tracks;
     
-    juce::Label thermalVoltageLabel, emissionCoefficientLabel, saturationCurrentLabel;
+    juce::Label inputSliderLabel, driveSliderLabel, trimSliderLabel;
     std::vector<juce::Label*> labels;
     
-    std::string thermalVoltageText = "Thermal Voltage";
-    std::string emissionCoefficientText = "Emission Coefficient";
-    std::string saturationCurrentText = "Saturation Current";
+    std::string inputSliderLabelText = "Input";
+    std::string driveSliderLabelText = "Drive";
+    std::string trimSliderLabelText = "Trim";
     std::vector<std::string> labelTexts;
     
-    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> thermalVoltageSliderAttach, emissionCoefficientSliderAttach, saturationCurrentSliderAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> inputSliderAttach, driveSliderAttach, trimSliderAttach;
 
     
     OtherLookAndFeel otherLookAndFeel;
     
-    DiodeClipperAudioProcessor& audioProcessor;
+    ViatorDiodeClipperAudioProcessor& audioProcessor;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DiodeClipperAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ViatorDiodeClipperAudioProcessorEditor)
 };

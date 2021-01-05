@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipperAudioProcessor& p)
+ViatorDiodeClipperAudioProcessorEditor::ViatorDiodeClipperAudioProcessorEditor (ViatorDiodeClipperAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
     int leftMargin = 24;
@@ -18,22 +18,22 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
     
     sliders.reserve(3);
     sliders = {
-        &thermalVoltageSlider, &emissionCoefficientSlider, &saturationCurrentSlider
+        &inputSlider, &driveSlider, &trimSlider
     };
     
     tracks.reserve(3);
     tracks = {
-        &thermalVoltageSliderTrack, &emissionCoefficientSliderTrack, &saturationCurrentSliderTrack
+        &inputSliderTrack, &driveSliderTrack, &trimSliderTrack
     };
     
     labels.reserve(3);
     labels = {
-            &thermalVoltageLabel, &emissionCoefficientLabel, &saturationCurrentLabel
+            &inputSliderLabel, &driveSliderLabel, &trimSliderLabel
     };
     
     labelTexts.reserve(3);
     labelTexts = {
-        thermalVoltageText, emissionCoefficientText, saturationCurrentText
+        inputSliderLabelText, driveSliderLabelText, trimSliderLabelText
     };
     
     for (size_t i {0}; i < sliders.size(); i++) {
@@ -59,29 +59,29 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
         tracks[i]->setColour(0x1001311, juce::Colour::fromFloatRGBA(.2, .77, 1, 0));
         tracks[i]->setBounds(leftMargin + 8, leftMargin + 4, 130, 130);
         
-        if (sliders[i] == &thermalVoltageSlider){
-            sliders[i]->setRange(0.01f, 0.04f, 0.01f);
-            tracks[i]->setRange(0.01f, 0.04f, 0.01f);
-            tracks[i]->setTextValueSuffix(" mV");
-            sliders[i]->setTextValueSuffix(" mV");
+        if (sliders[i] == &inputSlider){
+            sliders[i]->setRange(-24, 24, 0.5);
+            tracks[i]->setRange(-24, 24, 0.5);
+            tracks[i]->setTextValueSuffix(" dB");
+            sliders[i]->setTextValueSuffix(" dB");
             sliders[i]->setDoubleClickReturnValue(true, 0.0253f);
-            thermalVoltageSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, thermalVoltageSliderId, thermalVoltageSliderTrack);
+            inputSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputSliderId, inputSliderTrack);
             
-        } else if (sliders[i] == &emissionCoefficientSlider){
-            sliders[i]->setRange(1.0f, 2.0f, 0.01f);
-            tracks[i]->setRange(1.0f, 2.0f, 0.01f);
-            tracks[i]->setTextValueSuffix(" n");
-            sliders[i]->setTextValueSuffix(" n");
+        } else if (sliders[i] == &driveSlider){
+            sliders[i]->setRange(0, 24, 0.5);
+            tracks[i]->setRange(0, 24, 0.5);
+            tracks[i]->setTextValueSuffix(" dB");
+            sliders[i]->setTextValueSuffix(" dB");
             sliders[i]->setDoubleClickReturnValue(true, 1.68f);
-            emissionCoefficientSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, emissionCoefficientSliderId, emissionCoefficientSliderTrack);
+            driveSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, driveSliderId, driveSliderTrack);
 
-        } else if (sliders[i] == &saturationCurrentSlider){
-            sliders[i]->setRange(-1.0f, 1.0f, 0.01f);
-            tracks[i]->setRange(-1.0f, 1.0f, 0.01f);
-            tracks[i]->setTextValueSuffix(" Is");
-            sliders[i]->setTextValueSuffix(" Is");
+        } else if (sliders[i] == &trimSlider){
+            sliders[i]->setRange(-24, 24, 0.5);
+            tracks[i]->setRange(-24, 24, 0.5);
+            tracks[i]->setTextValueSuffix(" dB");
+            sliders[i]->setTextValueSuffix(" dB");
             sliders[i]->setDoubleClickReturnValue(true, 0.105f);
-            saturationCurrentSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, saturationCurrentSliderId, saturationCurrentSliderTrack);
+            trimSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimSliderId, trimSliderTrack);
     }
         
         //Labels
@@ -91,7 +91,7 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
         labels[i]->setJustificationType(juce::Justification::centred);
         labels[i]->setColour(0x1000281, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
         
-        if (sliders[i] == &thermalVoltageSlider){
+        if (sliders[i] == &inputSlider){
             sliders[i]->setBounds(leftMargin, topMargin + 32, 145, 145);
             tracks[i]->setBounds(leftMargin + 6, topMargin + 34, 133, 133);
         } else {
@@ -103,24 +103,24 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
     setSize (500, 273);
 }
 
-DiodeClipperAudioProcessorEditor::~DiodeClipperAudioProcessorEditor()
+ViatorDiodeClipperAudioProcessorEditor::~ViatorDiodeClipperAudioProcessorEditor()
 {
 }
 
 //==============================================================================
-void DiodeClipperAudioProcessorEditor::paint (juce::Graphics& g)
+void ViatorDiodeClipperAudioProcessorEditor::paint (juce::Graphics& g)
 {
     g.fillAll(juce::Colour::fromFloatRGBA(0.14f, 0.16f, 0.2f, 1.0));
 
 }
 
-void DiodeClipperAudioProcessorEditor::resized()
+void ViatorDiodeClipperAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
 }
 
-void DiodeClipperAudioProcessorEditor::sliderValueChanged(juce::Slider *slider){
+void ViatorDiodeClipperAudioProcessorEditor::sliderValueChanged(juce::Slider *slider){
     for (size_t i {0}; i < sliders.size(); i++) {
         if (slider == tracks[i]){
             sliders[i]->setValue(tracks[i]->getValue());

@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-DiodeClipperAudioProcessor::DiodeClipperAudioProcessor()
+ViatorDiodeClipperAudioProcessor::ViatorDiodeClipperAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
@@ -25,23 +25,23 @@ treeState (*this, nullptr, "PARAMETER", createParameterLayout())
 {
 }
 
-DiodeClipperAudioProcessor::~DiodeClipperAudioProcessor()
+ViatorDiodeClipperAudioProcessor::~ViatorDiodeClipperAudioProcessor()
 {
 }
 
-juce::AudioProcessorValueTreeState::ParameterLayout DiodeClipperAudioProcessor::createParameterLayout()
+juce::AudioProcessorValueTreeState::ParameterLayout ViatorDiodeClipperAudioProcessor::createParameterLayout()
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
     params.reserve(3);
     
     
-    auto thermalVoltageParam = std::make_unique<juce::AudioParameterFloat>(thermalVoltageSliderId, thermalVoltageSliderName, 0.01f, 0.04f, 0.04f);
-    auto emissionCoefficientParam = std::make_unique<juce::AudioParameterFloat>(emissionCoefficientSliderId, emissionCoefficientSliderName, 1.0f, 2.0f, 2.0f);
-    auto saturationCurrentParam = std::make_unique<juce::AudioParameterFloat>(saturationCurrentSliderId, saturationCurrentSliderName, -1.0f, 1.0f, 1.0f);
+    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, -24, 24, 0);
+    auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveSliderId, driveSliderName, 0, 24, 0);
+    auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimSliderId, trimSliderName, -24, 24, 0);
     
-    params.push_back(std::move(thermalVoltageParam));
-    params.push_back(std::move(emissionCoefficientParam));
-    params.push_back(std::move(saturationCurrentParam));
+    params.push_back(std::move(inputParam));
+    params.push_back(std::move(driveParam));
+    params.push_back(std::move(trimParam));
     
 
     
@@ -49,12 +49,12 @@ juce::AudioProcessorValueTreeState::ParameterLayout DiodeClipperAudioProcessor::
 }
 
 //==============================================================================
-const juce::String DiodeClipperAudioProcessor::getName() const
+const juce::String ViatorDiodeClipperAudioProcessor::getName() const
 {
     return JucePlugin_Name;
 }
 
-bool DiodeClipperAudioProcessor::acceptsMidi() const
+bool ViatorDiodeClipperAudioProcessor::acceptsMidi() const
 {
    #if JucePlugin_WantsMidiInput
     return true;
@@ -63,7 +63,7 @@ bool DiodeClipperAudioProcessor::acceptsMidi() const
    #endif
 }
 
-bool DiodeClipperAudioProcessor::producesMidi() const
+bool ViatorDiodeClipperAudioProcessor::producesMidi() const
 {
    #if JucePlugin_ProducesMidiOutput
     return true;
@@ -72,7 +72,7 @@ bool DiodeClipperAudioProcessor::producesMidi() const
    #endif
 }
 
-bool DiodeClipperAudioProcessor::isMidiEffect() const
+bool ViatorDiodeClipperAudioProcessor::isMidiEffect() const
 {
    #if JucePlugin_IsMidiEffect
     return true;
@@ -81,54 +81,55 @@ bool DiodeClipperAudioProcessor::isMidiEffect() const
    #endif
 }
 
-double DiodeClipperAudioProcessor::getTailLengthSeconds() const
+double ViatorDiodeClipperAudioProcessor::getTailLengthSeconds() const
 {
     return 0.0;
 }
 
-int DiodeClipperAudioProcessor::getNumPrograms()
+int ViatorDiodeClipperAudioProcessor::getNumPrograms()
 {
     return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
                 // so this should be at least 1, even if you're not really implementing programs.
 }
 
-int DiodeClipperAudioProcessor::getCurrentProgram()
+int ViatorDiodeClipperAudioProcessor::getCurrentProgram()
 {
     return 0;
 }
 
-void DiodeClipperAudioProcessor::setCurrentProgram (int index)
+void ViatorDiodeClipperAudioProcessor::setCurrentProgram (int index)
 {
 }
 
-const juce::String DiodeClipperAudioProcessor::getProgramName (int index)
+const juce::String ViatorDiodeClipperAudioProcessor::getProgramName (int index)
 {
     return {};
 }
 
-void DiodeClipperAudioProcessor::changeProgramName (int index, const juce::String& newName)
+void ViatorDiodeClipperAudioProcessor::changeProgramName (int index, const juce::String& newName)
 {
 }
 
 //==============================================================================
-void DiodeClipperAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void ViatorDiodeClipperAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     juce::dsp::ProcessSpec spec;
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;
     spec.numChannels = getTotalNumOutputChannels();
     
+    inputGainProcessor.prepare(spec);
     outputGainProcessor.prepare(spec);
 }
 
-void DiodeClipperAudioProcessor::releaseResources()
+void ViatorDiodeClipperAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool DiodeClipperAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
+bool ViatorDiodeClipperAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
   #if JucePlugin_IsMidiEffect
     juce::ignoreUnused (layouts);
@@ -151,58 +152,64 @@ bool DiodeClipperAudioProcessor::isBusesLayoutSupported (const BusesLayout& layo
 }
 #endif
 
-void DiodeClipperAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+void ViatorDiodeClipperAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
+    
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
+    
+    auto* rawInput = treeState.getRawParameterValue(inputSliderId);
+    auto* rawDrive = treeState.getRawParameterValue(driveSliderId);
+    auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
+    
+    juce::dsp::AudioBlock<float> audioBlock (buffer);
+    
+//    inputGainProcessor.setGainDecibels(*rawInput);
+//    inputGainProcessor.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
 
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
         auto* outputData = buffer.getWritePointer (channel);
         auto* inputData = buffer.getReadPointer(channel);
-        auto* rawThermalVoltage = treeState.getRawParameterValue(thermalVoltageSliderId);
-        auto* rawEmissionCoefficient = treeState.getRawParameterValue(emissionCoefficientSliderId);
-        auto* rawSaturationCurrent = treeState.getRawParameterValue(saturationCurrentSliderId);
 
         for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
-            outputData[sample] = (*rawSaturationCurrent * exp(((0.1f * inputData[sample]) / (*rawEmissionCoefficient * *rawThermalVoltage))) - 1);
+            outputData[sample] = (exp((((pow(10, (*rawInput * .05)) * .1) * inputData[sample]) / (scaleRange(*rawDrive, 0.0f, 24.0f, 2.0f, 1.0f) * scaleRange(*rawDrive, 0.0f, 24.0, 0.04f, 0.01)))) - 1);
         }
     }
+    
+    outputGainProcessor.setGainDecibels(*rawTrim - ((*rawInput + *rawDrive)));
+    outputGainProcessor.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
 }
 
-//Saturation Current = 1;
-//Drive -> Emission Coefficient [2...1]
-//Drive -> Thermal Voltage [.04....01]
-//Expecting -15 to -18 dB of signal
-//Need an input knob to multiply the input where is says "0.1f" now
-//Drive will scale the Emission Current and Thermal Voltage
-//Will need a trim knob as an output multiplier with automatic compensation as the drive and input goes up
-//This will all be one setting in the channel strip plugin. The user will be able to select different console saturation circuits, this one being the diode circuit
+float ViatorDiodeClipperAudioProcessor::scaleRange(float input, float inputLow, float inputHigh, float outputLow, float outputHigh){
+    return ((input - inputLow) / (inputHigh - inputLow)) * (outputHigh - outputLow) + outputLow;
+
+}
 
 //==============================================================================
-bool DiodeClipperAudioProcessor::hasEditor() const
+bool ViatorDiodeClipperAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
 }
 
-juce::AudioProcessorEditor* DiodeClipperAudioProcessor::createEditor()
+juce::AudioProcessorEditor* ViatorDiodeClipperAudioProcessor::createEditor()
 {
-    return new DiodeClipperAudioProcessorEditor (*this);
+    return new ViatorDiodeClipperAudioProcessorEditor (*this);
 }
 
 //==============================================================================
-void DiodeClipperAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
+void ViatorDiodeClipperAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
     // You should use this method to store your parameters in the memory block.
     // You could do that either as raw data, or use the XML or ValueTree classes
     // as intermediaries to make it easy to save and load complex data.
 }
 
-void DiodeClipperAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
+void ViatorDiodeClipperAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
     // You should use this method to restore your parameters from this memory block,
     // whose contents will have been created by the getStateInformation() call.
@@ -212,5 +219,5 @@ void DiodeClipperAudioProcessor::setStateInformation (const void* data, int size
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new DiodeClipperAudioProcessor();
+    return new ViatorDiodeClipperAudioProcessor();
 }

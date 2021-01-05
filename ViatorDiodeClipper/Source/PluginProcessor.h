@@ -10,24 +10,24 @@
 
 #include <JuceHeader.h>
 
-#define thermalVoltageSliderId "thermalVoltage"
-#define thermalVoltageSliderName "Thermal Voltage"
+#define inputSliderId "input"
+#define inputSliderName "Input"
 
-#define emissionCoefficientSliderId "emissionCoefficient"
-#define emissionCoefficientSliderName "Emission Coefficient"
+#define driveSliderId "drive"
+#define driveSliderName "Drive"
 
-#define saturationCurrentSliderId "saturationCurrent"
-#define saturationCurrentSliderName "Saturation Current"
+#define trimSliderId "trim"
+#define trimSliderName "Trim"
 
 //==============================================================================
 /**
 */
-class DiodeClipperAudioProcessor  : public juce::AudioProcessor
+class ViatorDiodeClipperAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    DiodeClipperAudioProcessor();
-    ~DiodeClipperAudioProcessor() override;
+    ViatorDiodeClipperAudioProcessor();
+    ~ViatorDiodeClipperAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -61,15 +61,18 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    float scaleRange (float input, float inputLow, float inputHigh, float outputLow, float outputHigh);
+
     
     juce::AudioProcessorValueTreeState treeState;
 
 private:
     
+    juce::dsp::Gain<float> inputGainProcessor;
     juce::dsp::Gain<float> outputGainProcessor;
     
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DiodeClipperAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ViatorDiodeClipperAudioProcessor)
 };
