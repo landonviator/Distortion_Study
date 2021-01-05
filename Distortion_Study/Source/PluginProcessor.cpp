@@ -15,17 +15,37 @@ Distortion_StudyAudioProcessor::Distortion_StudyAudioProcessor()
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
                       #if ! JucePlugin_IsSynth
-                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), true)
+                       .withInput  ("Input",  juce::AudioChannelSet::stereo(), false)
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+treeState (*this, nullptr, "PARAMETER", createParameterLayout())
 #endif
 {
 }
 
 Distortion_StudyAudioProcessor::~Distortion_StudyAudioProcessor()
 {
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout Distortion_StudyAudioProcessor::createParameterLayout()
+{
+    std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
+    params.reserve(3);
+    
+    
+    auto inputGainParam = std::make_unique<juce::AudioParameterFloat>(inputGainSliderId, inputGainSliderName, -48, 48, 0);
+    auto biasVoltageParam = std::make_unique<juce::AudioParameterFloat>(biasSliderId, biasSliderName, -1.0f, 1.0f, 0);
+    auto outputGainParam = std::make_unique<juce::AudioParameterFloat>(outputGainSliderId, outputGainSliderName, -48, 48, 0);
+    
+    params.push_back(std::move(inputGainParam));
+    params.push_back(std::move(biasVoltageParam));
+    params.push_back(std::move(outputGainParam));
+    
+
+    
+    return { params.begin(), params.end() };
 }
 
 //==============================================================================
@@ -93,8 +113,14 @@ void Distortion_StudyAudioProcessor::changeProgramName (int index, const juce::S
 //==============================================================================
 void Distortion_StudyAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    juce::dsp::ProcessSpec spec;
+    spec.maximumBlockSize = samplesPerBlock;
+    spec.sampleRate = sampleRate;
+    spec.numChannels = getTotalNumOutputChannels();
+    
+    distortionProcessor.prepare(spec);
+    distortionProcessor.get<1>().setRampDurationSeconds(1.0f);
+    distortionProcessor.get<2>().functionToUse = juce::dsp::FastMathApproximations::tanh;
 }
 
 void Distortion_StudyAudioProcessor::releaseResources()
@@ -132,28 +158,23 @@ void Distortion_StudyAudioProcessor::processBlock (juce::AudioBuffer<float>& buf
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
-
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
+    
+    juce::dsp::AudioBlock<float> audioBlock (buffer);
+    
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
-
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
-    }
+    
+    auto* rawInputGain = treeState.getRawParameterValue(inputGainSliderId);
+    distortionProcessor.get<0>().setGainDecibels(*rawInputGain);
+    
+    auto* rawBiasVoltage = treeState.getRawParameterValue(biasSliderId);
+    distortionProcessor.get<1>().setBias(*rawBiasVoltage);
+        
+    auto* rawOutputGain = treeState.getRawParameterValue(outputGainSliderId);
+    distortionProcessor.get<3>().setGainDecibels(*rawOutputGain);
+    
+    distortionProcessor.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    
 }
 
 //==============================================================================
@@ -170,15 +191,16 @@ juce::AudioProcessorEditor* Distortion_StudyAudioProcessor::createEditor()
 //==============================================================================
 void Distortion_StudyAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    juce::MemoryOutputStream stream(destData, false);
+    treeState.state.writeToStream (stream);
 }
 
 void Distortion_StudyAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    juce::ValueTree tree = juce::ValueTree::readFromData (data, size_t (sizeInBytes));
+    if (tree.isValid()) {
+        treeState.state = tree;
+    }
 }
 
 //==============================================================================

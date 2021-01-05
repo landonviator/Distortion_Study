@@ -10,6 +10,15 @@
 
 #include <JuceHeader.h>
 
+#define inputGainSliderId "inputGain"
+#define inputGainSliderName "Input Gain"
+
+#define biasSliderId "bias"
+#define biasSliderName "Bias"
+
+#define outputGainSliderId "outputGain"
+#define outputGainSliderName "Output Gain"
+
 //==============================================================================
 /**
 */
@@ -53,7 +62,20 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
 
+    juce::AudioProcessorValueTreeState treeState;
+
+    
 private:
+    
+    using InputGainProcessor = juce::dsp::Gain<float>;
+    using BiasProcessor = juce::dsp::Bias<float>;
+    using WaveshapingProcessor = juce::dsp::WaveShaper<float>;
+    using OutputGainProcessor = juce::dsp::Gain<float>;
+
+    juce::dsp::ProcessorChain<InputGainProcessor, BiasProcessor, WaveshapingProcessor, OutputGainProcessor> distortionProcessor;
+    
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Distortion_StudyAudioProcessor)
 };
