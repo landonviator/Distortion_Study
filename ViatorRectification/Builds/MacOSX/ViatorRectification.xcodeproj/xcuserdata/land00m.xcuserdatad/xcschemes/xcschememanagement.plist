@@ -4,30 +4,30 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>ViatorDiodeClipper - AU.xcscheme_^#shared#^_</key>
+		<key>ViatorRectification - AU.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>ViatorDiodeClipper - All.xcscheme_^#shared#^_</key>
+		<key>ViatorRectification - All.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>ViatorDiodeClipper - Shared Code.xcscheme_^#shared#^_</key>
+		<key>ViatorRectification - Shared Code.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>ViatorRectification - Standalone Plugin.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>ViatorDiodeClipper - Standalone Plugin.xcscheme_^#shared#^_</key>
+		<key>ViatorRectification - VST3.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
-		</dict>
-		<key>ViatorDiodeClipper - VST3.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 	</dict>
 </dict>
