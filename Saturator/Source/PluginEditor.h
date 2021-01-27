@@ -60,6 +60,9 @@ private:
     juce::Slider driveSlider, trimSlider;
     juce::ComboBox distortionType;
     
+    std::unique_ptr <juce::AudioProcessorValueTreeState::SliderAttachment> driveSliderAttach, trimSliderAttach;
+    std::unique_ptr <juce::AudioProcessorValueTreeState::ComboBoxAttachment> distortionTypeAttach;
+    
     SaturatorAudioProcessor& audioProcessor;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SaturatorAudioProcessorEditor)

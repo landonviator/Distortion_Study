@@ -10,6 +10,13 @@
 
 #include <JuceHeader.h>
 
+#define driveSliderId "drive"
+#define driveSliderName "Drive"
+#define trimSliderId "trim"
+#define trimSliderName "Trim"
+#define modelId "model"
+#define modelName "Model"
+
 //==============================================================================
 /**
 */
@@ -52,6 +59,19 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    float scaleRange (const float &input, const float &inputLow, const float &inputHigh, const float &outputLow, const float &outputHigh);
+    
+    float softClip(const float &input, const float &drive);
+    float hardClip(const float &input, const float &drive);
+    float dcDistortion(const float &input, const float &drive);
+    float diode(const float &input, const float &drive);
+    float fullWaveRect(const float &input, const float &drive);
+    
+    juce::AudioProcessorValueTreeState treeState;
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    
+    const float piDivisor = 2 / M_PI;
 
 private:
     //==============================================================================

@@ -19,13 +19,30 @@ SaturatorAudioProcessor::SaturatorAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+treeState (*this, nullptr, "PARAMETER", createParameterLayout())
 #endif
 {
 }
 
 SaturatorAudioProcessor::~SaturatorAudioProcessor()
 {
+}
+
+juce::AudioProcessorValueTreeState::ParameterLayout SaturatorAudioProcessor::createParameterLayout()
+{
+    std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
+    params.reserve(3);
+    
+    auto driveParam = std::make_unique<juce::AudioParameterFloat>(driveSliderId, driveSliderName, 0.0f, 24.0f, 0.0f);
+    auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimSliderId, trimSliderName, -36.0f, 36.0f, 0.0f);
+    auto modelParam = std::make_unique<juce::AudioParameterInt>(modelId, modelName, 0, 6, 0);
+
+    params.push_back(std::move(driveParam));
+    params.push_back(std::move(trimParam));
+    params.push_back(std::move(modelParam));
+    
+    return { params.begin(), params.end() };
 }
 
 //==============================================================================
@@ -135,27 +152,101 @@ void SaturatorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
     auto totalNumInputChannels  = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
-    // In case we have more outputs than inputs, this code clears any output
-    // channels that didn't contain input data, (because these aren't
-    // guaranteed to be empty - they may contain garbage).
-    // This is here to avoid people getting screaming feedback
-    // when they first compile a plugin, but obviously you don't need to keep
-    // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
 
-    // This is the place where you'd normally do the guts of your plugin's
-    // audio processing...
-    // Make sure to reset the state if your inner loop is processing
-    // the samples and the outer loop is handling the channels.
-    // Alternatively, you can process the samples with the channels
-    // interleaved by keeping the same state.
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
+        auto* outputData = buffer.getWritePointer (channel);
+        auto* inputData = buffer.getReadPointer(channel);
+        auto* rawDrive = treeState.getRawParameterValue(driveSliderId);
+        auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
+        auto* rawModel = treeState.getRawParameterValue(modelId);
 
-        // ..do something to the data...
+        for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
+            
+            if (*rawModel == 1){
+                outputData[sample] = softClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                std::cout << "Soft" << std::endl;
+            } else if (*rawModel == 2){
+                outputData[sample] = hardClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                std::cout << "Hard" << std::endl;
+            } else if (*rawModel == 4){
+                outputData[sample] = dcDistortion(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                std::cout << "DC" << std::endl;
+            } else if (*rawModel == 5){
+                outputData[sample] = diode(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                std::cout << "Diode" << std::endl;
+            } else if (*rawModel == 6){
+                outputData[sample] = fullWaveRect(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                std::cout << "Full" << std::endl;
+            }
+            
+        }
     }
+}
+
+float SaturatorAudioProcessor::scaleRange(const float &input, const float &inputLow, const float &inputHigh, const float &outputLow, const float &outputHigh){
+    return ((input - inputLow) / (inputHigh - inputLow)) * (outputHigh - outputLow) + outputLow;
+}
+
+float SaturatorAudioProcessor::softClip(const float &input, const float &drive){
+    //1.5f to account for drop in gain from the saturation initial state
+    //pow(10, (-1 * drive) * 0.04f) to account for the increase in gain when the drive goes up
+    return piDivisor * atan(pow(10, drive * 0.05f) * input) * 1.5f * pow(10, (-1 * drive) * 0.04f);
+}
+
+float SaturatorAudioProcessor::hardClip(const float &input, const float &drive){
+    float driveScaled = scaleRange(drive, 0.0f, 24.0f, 0.1f, 0.01f);
+    float output;
+    
+    if (input >= driveScaled){
+        output = driveScaled;
+    } else if (input <= (driveScaled * -1)){
+        output = driveScaled * -1;
+    } else {
+        output = input;
+    }
+    
+    return output * 1.5f * pow(10, drive * 0.04);
+}
+
+float SaturatorAudioProcessor::dcDistortion(const float &input, const float &drive){
+    float dc = scaleRange(drive, 0.0f, 24.0, 0.75f, 1.0f);
+    float x = (input * pow(10, drive * 0.05f)) + dc;
+    float y;
+    float output;
+    
+    if (abs(x) > 1) {
+        x = sin(x);
+    }
+    
+    y = x - 0.2f * pow(x, 5);
+    
+    output = (y - dc);
+    
+    return output;
+}
+
+float SaturatorAudioProcessor::diode(const float &input, const float &drive){
+    float output;
+    
+    output = (exp((((pow(10, input * 0.05f) * 0.1f) * input) / (scaleRange(drive, 0.0f, 24.0f, 2.0f, 1.0f) * scaleRange(drive, 0.0f, 24.0f, 0.04f, 0.01f)))) - 1);
+    
+    return  output;
+}
+
+float SaturatorAudioProcessor::fullWaveRect(const float &input, const float &drive){
+    float inputScaled = input;
+    float output;
+    
+    if (inputScaled >= 0.0f){
+        output = input;
+    } else {
+        output = input * -1;
+    }
+    
+    return output;
 }
 
 //==============================================================================
@@ -172,15 +263,16 @@ juce::AudioProcessorEditor* SaturatorAudioProcessor::createEditor()
 //==============================================================================
 void SaturatorAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    juce::MemoryOutputStream stream(destData, false);
+           treeState.state.writeToStream (stream);
 }
 
 void SaturatorAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    juce::ValueTree tree = juce::ValueTree::readFromData (data, size_t (sizeInBytes));
+            if (tree.isValid()) {
+                treeState.state = tree;
+            }
 }
 
 //==============================================================================

@@ -28,11 +28,12 @@ SaturatorAudioProcessorEditor::SaturatorAudioProcessorEditor (SaturatorAudioProc
     driveSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     driveSlider.setLookAndFeel(&customDial);
     driveSlider.setComponentEffect(&dialShadow);
+    driveSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, driveSliderId, driveSlider);
     
     //Trim slider
     addAndMakeVisible(trimSlider);
     trimSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    trimSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 64, 32);
+    trimSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 32);
     trimSlider.setRange(-36, 36, 0.5);
     trimSlider.setTextValueSuffix(" dB");
     trimSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
@@ -40,13 +41,22 @@ SaturatorAudioProcessorEditor::SaturatorAudioProcessorEditor (SaturatorAudioProc
     trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     trimSlider.setLookAndFeel(&customDial);
     trimSlider.setComponentEffect(&dialShadow);
+    trimSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimSliderId, trimSlider);
     
     //Combo box
     addAndMakeVisible(distortionType);
     distortionType.setTextWhenNothingSelected("Distortion Model");
+    distortionType.setColour(0x1000a00, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
     distortionType.setColour(0x1000b00, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     distortionType.setColour(0x1000c00, juce::Colour::fromFloatRGBA(0, 0, 0, 0));
     distortionType.setColour(0x1000e00, juce::Colour::fromFloatRGBA(0.392f, 0.584f, 0.929f, 0.25f));
+    distortionType.addItem("Distortion Model", 1);
+    distortionType.addItem("Soft Clip", 2);
+    distortionType.addItem("Hard Clip", 3);
+    distortionType.addItem("DC", 4);
+    distortionType.addItem("Diode", 5);
+    distortionType.addItem("Full-Wave Rect", 6);
+    distortionTypeAttach = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(audioProcessor.treeState, modelId, distortionType);
     
     //Making the window resizable by aspect ratio and setting size
     AudioProcessorEditor::setResizable(true, true);
