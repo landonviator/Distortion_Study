@@ -148,7 +148,7 @@ void ViatorRectificationAudioProcessor::processBlock (juce::AudioBuffer<float>& 
 //            } else {
 //                halfWaveRectification = 0;
 //            }
-            auto input = inputData[sample] * .1;
+            auto input = inputData[sample];
             
             if (input >= 0) {
                 fullWaveRectification = input;
