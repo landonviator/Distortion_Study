@@ -1,7 +1,5 @@
 # Viator Saturator
 
-# Viator 550B Prototype
-
 ![alt text](https://github.com/landonviator/Distortion_Study/blob/main/saturator.png "Viator Saturator")
  
 In working through a DSP book, I implemented five distortion models which include Soft Clipping, Hard Clipping, Diode Saturation, distortion with a bias, and Full-Wave Rectification.
