@@ -162,26 +162,34 @@ void SaturatorAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
         auto* rawDrive = treeState.getRawParameterValue(driveSliderId);
         auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
         auto* rawModel = treeState.getRawParameterValue(modelId);
+        int model = *rawModel;
 
         for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
             
-            if (*rawModel == 1){
-                outputData[sample] = softClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
-                std::cout << "Soft" << std::endl;
-            } else if (*rawModel == 2){
-                outputData[sample] = hardClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
-                std::cout << "Hard" << std::endl;
-            } else if (*rawModel == 4){
-                outputData[sample] = dcDistortion(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
-                std::cout << "DC" << std::endl;
-            } else if (*rawModel == 5){
-                outputData[sample] = diode(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
-                std::cout << "Diode" << std::endl;
-            } else if (*rawModel == 6){
-                outputData[sample] = fullWaveRect(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
-                std::cout << "Full" << std::endl;
+            switch (model) {
+                case 0:
+                    outputData[sample] = inputData[sample];
+                    break;
+                case 1:
+                    outputData[sample] = softClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                    break;
+                case 2:
+                    outputData[sample] = hardClip(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                    break;
+                case 4:
+                    outputData[sample] = dcDistortion(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                    break;
+                case 5:
+                    outputData[sample] = diode(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                    break;
+                case 6:
+                    outputData[sample] = fullWaveRect(inputData[sample], *rawDrive) * pow(10, *rawTrim * 0.05f);
+                    break;
+                    
+                default:
+                    outputData[sample] = inputData[sample];
+                    break;
             }
-            
         }
     }
 }
@@ -191,12 +199,15 @@ float SaturatorAudioProcessor::scaleRange(const float &input, const float &input
 }
 
 float SaturatorAudioProcessor::softClip(const float &input, const float &drive){
+    
     //1.5f to account for drop in gain from the saturation initial state
     //pow(10, (-1 * drive) * 0.04f) to account for the increase in gain when the drive goes up
+    
     return piDivisor * atan(pow(10, drive * 0.05f) * input) * 1.5f * pow(10, (-1 * drive) * 0.04f);
 }
 
 float SaturatorAudioProcessor::hardClip(const float &input, const float &drive){
+    
     float driveScaled = scaleRange(drive, 0.0f, 24.0f, 0.1f, 0.01f);
     float output;
     
@@ -212,6 +223,7 @@ float SaturatorAudioProcessor::hardClip(const float &input, const float &drive){
 }
 
 float SaturatorAudioProcessor::dcDistortion(const float &input, const float &drive){
+    
     float dc = scaleRange(drive, 0.0f, 24.0, 0.75f, 1.0f);
     float x = (input * pow(10, drive * 0.05f)) + dc;
     float y;
@@ -229,6 +241,7 @@ float SaturatorAudioProcessor::dcDistortion(const float &input, const float &dri
 }
 
 float SaturatorAudioProcessor::diode(const float &input, const float &drive){
+    
     float output;
     
     output = (exp((((pow(10, input * 0.05f) * 0.1f) * input) / (scaleRange(drive, 0.0f, 24.0f, 2.0f, 1.0f) * scaleRange(drive, 0.0f, 24.0f, 0.04f, 0.01f)))) - 1);
@@ -237,6 +250,7 @@ float SaturatorAudioProcessor::diode(const float &input, const float &drive){
 }
 
 float SaturatorAudioProcessor::fullWaveRect(const float &input, const float &drive){
+    
     float inputScaled = input;
     float output;
     
