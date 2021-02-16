@@ -164,14 +164,11 @@ void ViatorHardClipperAudioProcessor::processBlock (juce::AudioBuffer<float>& bu
     juce::dsp::AudioBlock<float> audioBlock (buffer);
 
     auto* rawInput = treeState.getRawParameterValue(inputSliderId);
-    //auto* rawDrive = treeState.getRawParameterValue(driveSliderId);
+    auto* rawDrive = treeState.getRawParameterValue(driveSliderId);
     auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
     
     //This way the input knob controls the input and the drive/thresh. Makes it feel like using a single drive knob
-    float driveScaled = scaleRange(*rawInput, 0.0f, 24.0f, 0.1f, 0.01f);
-    
-        inputGainProcessor.setGainDecibels(*rawInput);
-        inputGainProcessor.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    float driveScaled = scaleRange(*rawDrive, 0.0f, 24.0f, 0.9f, 0.0001f);
     
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
@@ -180,14 +177,14 @@ void ViatorHardClipperAudioProcessor::processBlock (juce::AudioBuffer<float>& bu
 
         for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
             
-            if (inputData[sample] >= driveScaled) {
+            if (inputData[sample] * pow(10, *rawInput * 0.05) >= driveScaled) {
                 outputData[sample] = driveScaled;
                 
-            } else if (inputData[sample] <= (driveScaled * -1)){
+            } else if (inputData[sample] * pow(10, *rawInput * 0.05) <= (driveScaled * -1)){
                 outputData[sample] = driveScaled * -1;
 
             } else {
-                outputData[sample] = inputData[sample];
+                outputData[sample] = inputData[sample] * pow(10, *rawInput * 0.05);
 
             }
         }

@@ -13,8 +13,8 @@
 SaturatorAudioProcessorEditor::SaturatorAudioProcessorEditor (SaturatorAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    shadowProperties.radius = 15;
-    shadowProperties.offset = juce::Point<int> (-2, 6);
+    shadowProperties.radius = 24;
+    shadowProperties.offset = juce::Point<int> (-1, 3);
     dialShadow.setShadowProperties (shadowProperties);
     
     //Drive slider

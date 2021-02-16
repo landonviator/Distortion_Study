@@ -35,9 +35,9 @@ juce::AudioProcessorValueTreeState::ParameterLayout DiodeClipperAudioProcessor::
     params.reserve(3);
     
     
-    auto thermalVoltageParam = std::make_unique<juce::AudioParameterFloat>(thermalVoltageSliderId, thermalVoltageSliderName, 0.01f, 0.04f, 0.04f);
-    auto emissionCoefficientParam = std::make_unique<juce::AudioParameterFloat>(emissionCoefficientSliderId, emissionCoefficientSliderName, 1.0f, 2.0f, 2.0f);
-    auto saturationCurrentParam = std::make_unique<juce::AudioParameterFloat>(saturationCurrentSliderId, saturationCurrentSliderName, -1.0f, 1.0f, 1.0f);
+    auto thermalVoltageParam = std::make_unique<juce::AudioParameterFloat>(thermalVoltageSliderId, thermalVoltageSliderName, 0.001f, 0.09f, 0.0253f);
+    auto emissionCoefficientParam = std::make_unique<juce::AudioParameterFloat>(emissionCoefficientSliderId, emissionCoefficientSliderName, 1.0f, 2.0f, 1.68f);
+    auto saturationCurrentParam = std::make_unique<juce::AudioParameterFloat>(saturationCurrentSliderId, saturationCurrentSliderName, 0.001f, 1.0f, 0.105f);
     
     params.push_back(std::move(thermalVoltageParam));
     params.push_back(std::move(emissionCoefficientParam));
@@ -169,7 +169,7 @@ void DiodeClipperAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
         auto* rawSaturationCurrent = treeState.getRawParameterValue(saturationCurrentSliderId);
 
         for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
-            outputData[sample] = (*rawSaturationCurrent * exp(((0.1f * inputData[sample]) / (*rawEmissionCoefficient * *rawThermalVoltage))) - 1);
+            outputData[sample] = exp(inputData[sample] / (0.0253 * 1.68)) - 1;
         }
     }
 }

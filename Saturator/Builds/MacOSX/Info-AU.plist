@@ -29,7 +29,7 @@
     <array>
       <dict>
         <key>name</key>
-        <string>ViatorDSP: Saturator</string>
+        <string>Viator DSP: Saturator</string>
         <key>description</key>
         <string>Saturator</string>
         <key>factoryFunction</key>

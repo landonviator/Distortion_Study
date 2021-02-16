@@ -2,7 +2,7 @@
 
 <JUCERPROJECT id="VJ7odt" name="Saturator" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
-              pluginName="Saturator" pluginManufacturer="ViatorDSP">
+              pluginName="Saturator" pluginManufacturer="Viator DSP">
   <MAINGROUP id="JTPWHB" name="Saturator">
     <GROUP id="{7DBDE8F7-101C-680A-7A88-0175CC151FF4}" name="Source">
       <FILE id="ydL7LG" name="PluginProcessor.cpp" compile="1" resource="0"

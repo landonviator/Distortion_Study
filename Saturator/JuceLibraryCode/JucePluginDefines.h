@@ -44,7 +44,7 @@
  #define JucePlugin_Desc                   "Saturator"
 #endif
 #ifndef  JucePlugin_Manufacturer
- #define JucePlugin_Manufacturer           "ViatorDSP"
+ #define JucePlugin_Manufacturer           "Viator DSP"
 #endif
 #ifndef  JucePlugin_ManufacturerWebsite
  #define JucePlugin_ManufacturerWebsite    ""
@@ -149,7 +149,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "ViatorDSP: Saturator"
+ #define JucePlugin_IAAName                "Viator DSP: Saturator"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16

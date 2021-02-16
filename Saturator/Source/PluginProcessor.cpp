@@ -203,12 +203,12 @@ float SaturatorAudioProcessor::softClip(const float &input, const float &drive){
     //1.5f to account for drop in gain from the saturation initial state
     //pow(10, (-1 * drive) * 0.04f) to account for the increase in gain when the drive goes up
     
-    return piDivisor * atan(pow(10, drive * 0.05f) * input) * 1.5f * pow(10, (-1 * drive) * 0.04f);
+    return piDivisor * atan(pow(10, (drive * 4) * 0.05f) * input) * 1.5f * pow(10, (-1 * drive) * 0.04f);
 }
 
 float SaturatorAudioProcessor::hardClip(const float &input, const float &drive){
     
-    float driveScaled = scaleRange(drive, 0.0f, 24.0f, 0.1f, 0.01f);
+    float driveScaled = scaleRange(drive, 0.0f, 24.0f, 1.0f, 0.0001f);
     float output;
     
     if (input >= driveScaled){
@@ -242,11 +242,11 @@ float SaturatorAudioProcessor::dcDistortion(const float &input, const float &dri
 
 float SaturatorAudioProcessor::diode(const float &input, const float &drive){
     
-    float output;
+    float diodeClipper;
     
-    output = (exp((((pow(10, input * 0.05f) * 0.1f) * input) / (scaleRange(drive, 0.0f, 24.0f, 2.0f, 1.0f) * scaleRange(drive, 0.0f, 24.0f, 0.04f, 0.01f)))) - 1);
+    diodeClipper = 0.105 * (exp(0.1 * input / (1.68 * 0.0253)) - 1);
     
-    return  output;
+    return diodeClipper;
 }
 
 float SaturatorAudioProcessor::fullWaveRect(const float &input, const float &drive){

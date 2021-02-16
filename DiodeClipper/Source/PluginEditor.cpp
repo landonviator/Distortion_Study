@@ -41,47 +41,48 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
         //sliders[i]->addListener(this);
         sliders[i]->setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
         sliders[i]->setTextBoxStyle(juce::Slider::TextBoxBelow, true, 256, 32);
-        sliders[i]->setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
-        sliders[i]->setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
+        sliders[i]->setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
+        sliders[i]->setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
         sliders[i]->setLookAndFeel(&otherLookAndFeel);
         
         //Slider Tracks
-        addAndMakeVisible(tracks[i]);
-        tracks[i]->addListener(this);
-        tracks[i]->setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
-        tracks[i]->setTextBoxStyle(juce::Slider::TextBoxBelow, true, 128, 24);
-        tracks[i]->setDoubleClickReturnValue(true, 0);
-        tracks[i]->setNumDecimalPlacesToDisplay(1);
-        tracks[i]->setColour(0x1001700, juce::Colour::fromFloatRGBA(0, 0, 0, 0));
-        tracks[i]->setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
-        tracks[i]->setColour(0x1001300, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
-        tracks[i]->setColour(0x1001312, juce::Colour::fromFloatRGBA(0, 0, 0, .25));
-        tracks[i]->setColour(0x1001311, juce::Colour::fromFloatRGBA(.2, .77, 1, 0));
-        tracks[i]->setBounds(leftMargin + 8, leftMargin + 4, 130, 130);
+//        addAndMakeVisible(tracks[i]);
+//        tracks[i]->addListener(this);
+//        tracks[i]->setSliderStyle(juce::Slider::SliderStyle::RotaryHorizontalVerticalDrag);
+//        tracks[i]->setTextBoxStyle(juce::Slider::TextBoxBelow, true, 128, 24);
+//        tracks[i]->setDoubleClickReturnValue(true, 0);
+//        tracks[i]->setNumDecimalPlacesToDisplay(1);
+//        tracks[i]->setColour(0x1001700, juce::Colour::fromFloatRGBA(0, 0, 0, 0));
+//        tracks[i]->setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.5f));
+//        tracks[i]->setColour(0x1001300, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
+//        tracks[i]->setColour(0x1001312, juce::Colour::fromFloatRGBA(0, 0, 0, .25));
+//        tracks[i]->setColour(0x1001311, juce::Colour::fromFloatRGBA(.2, .77, 1, 0));
+//        tracks[i]->setBounds(leftMargin + 8, leftMargin + 4, 130, 130);
         
         if (sliders[i] == &thermalVoltageSlider){
-            sliders[i]->setRange(0.01f, 0.04f, 0.01f);
-            tracks[i]->setRange(0.01f, 0.04f, 0.01f);
-            tracks[i]->setTextValueSuffix(" mV");
+            sliders[i]->setRange(0.001f, 0.09f, 0.001f);
+            //tracks[i]->setRange(0.001f, 0.09f, 0.001f);
+           // tracks[i]->setTextValueSuffix(" mV");
             sliders[i]->setTextValueSuffix(" mV");
             sliders[i]->setDoubleClickReturnValue(true, 0.0253f);
             thermalVoltageSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, thermalVoltageSliderId, thermalVoltageSliderTrack);
             
         } else if (sliders[i] == &emissionCoefficientSlider){
             sliders[i]->setRange(1.0f, 2.0f, 0.01f);
-            tracks[i]->setRange(1.0f, 2.0f, 0.01f);
-            tracks[i]->setTextValueSuffix(" n");
+            //tracks[i]->setRange(1.0f, 2.0f, 0.01f);
+            //tracks[i]->setTextValueSuffix(" n");
             sliders[i]->setTextValueSuffix(" n");
             sliders[i]->setDoubleClickReturnValue(true, 1.68f);
             emissionCoefficientSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, emissionCoefficientSliderId, emissionCoefficientSliderTrack);
 
         } else if (sliders[i] == &saturationCurrentSlider){
-            sliders[i]->setRange(-1.0f, 1.0f, 0.01f);
-            tracks[i]->setRange(-1.0f, 1.0f, 0.01f);
-            tracks[i]->setTextValueSuffix(" Is");
+            
+            //tracks[i]->setTextValueSuffix(" Is");
             sliders[i]->setTextValueSuffix(" Is");
             sliders[i]->setDoubleClickReturnValue(true, 0.105f);
             saturationCurrentSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, saturationCurrentSliderId, saturationCurrentSliderTrack);
+            sliders[i]->setRange(0.001f, 1.0f, 0.001f);
+            //tracks[i]->setRange(0.001f, 1.0f, 0.001f);
     }
         
         //Labels
@@ -93,10 +94,10 @@ DiodeClipperAudioProcessorEditor::DiodeClipperAudioProcessorEditor (DiodeClipper
         
         if (sliders[i] == &thermalVoltageSlider){
             sliders[i]->setBounds(leftMargin, topMargin + 32, 145, 145);
-            tracks[i]->setBounds(leftMargin + 6, topMargin + 34, 133, 133);
+            //tracks[i]->setBounds(leftMargin + 6, topMargin + 34, 133, 133);
         } else {
             sliders[i]->setBounds(sliders[i - 1]->getX() +  sliders[i - 1]->getWidth(), topMargin + 32, 145, 145);
-            tracks[i]->setBounds(sliders[i - 1]->getX() +  sliders[i - 1]->getWidth() + 6, topMargin + 34, 133, 133);
+            //tracks[i]->setBounds(sliders[i - 1]->getX() +  sliders[i - 1]->getWidth() + 6, topMargin + 34, 133, 133);
         }
 }
     
