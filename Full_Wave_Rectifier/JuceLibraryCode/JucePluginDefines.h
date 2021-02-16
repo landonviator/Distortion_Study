@@ -38,10 +38,10 @@
  #define JucePlugin_Enable_IAA             0
 #endif
 #ifndef  JucePlugin_Name
- #define JucePlugin_Name                   "Viator Rectification"
+ #define JucePlugin_Name                   "Full-Wave Rectifier"
 #endif
 #ifndef  JucePlugin_Desc
- #define JucePlugin_Desc                   "ViatorRectification"
+ #define JucePlugin_Desc                   "Full_Wave_Rectifier"
 #endif
 #ifndef  JucePlugin_Manufacturer
  #define JucePlugin_Manufacturer           "Viator DSP"
@@ -56,7 +56,7 @@
  #define JucePlugin_ManufacturerCode       0x4d616e75
 #endif
 #ifndef  JucePlugin_PluginCode
- #define JucePlugin_PluginCode             0x466f7770
+ #define JucePlugin_PluginCode             0x52333573
 #endif
 #ifndef  JucePlugin_IsSynth
  #define JucePlugin_IsSynth                0
@@ -98,16 +98,16 @@
  #define JucePlugin_AUSubType              JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_AUExportPrefix
- #define JucePlugin_AUExportPrefix         ViatorRectificationAU
+ #define JucePlugin_AUExportPrefix         Full_Wave_RectifierAU
 #endif
 #ifndef  JucePlugin_AUExportPrefixQuoted
- #define JucePlugin_AUExportPrefixQuoted   "ViatorRectificationAU"
+ #define JucePlugin_AUExportPrefixQuoted   "Full_Wave_RectifierAU"
 #endif
 #ifndef  JucePlugin_AUManufacturerCode
  #define JucePlugin_AUManufacturerCode     JucePlugin_ManufacturerCode
 #endif
 #ifndef  JucePlugin_CFBundleIdentifier
- #define JucePlugin_CFBundleIdentifier     com.yourcompany.ViatorRectification
+ #define JucePlugin_CFBundleIdentifier     com.yourcompany.Full_Wave_Rectifier
 #endif
 #ifndef  JucePlugin_RTASCategory
  #define JucePlugin_RTASCategory           0
@@ -125,7 +125,7 @@
  #define JucePlugin_RTASDisableMultiMono   0
 #endif
 #ifndef  JucePlugin_AAXIdentifier
- #define JucePlugin_AAXIdentifier          com.yourcompany.ViatorRectification
+ #define JucePlugin_AAXIdentifier          com.yourcompany.Full_Wave_Rectifier
 #endif
 #ifndef  JucePlugin_AAXManufacturerCode
  #define JucePlugin_AAXManufacturerCode    JucePlugin_ManufacturerCode
@@ -149,7 +149,7 @@
  #define JucePlugin_IAASubType             JucePlugin_PluginCode
 #endif
 #ifndef  JucePlugin_IAAName
- #define JucePlugin_IAAName                "Viator DSP: Viator Rectification"
+ #define JucePlugin_IAAName                "Viator DSP: Full-Wave Rectifier"
 #endif
 #ifndef  JucePlugin_VSTNumMidiInputs
  #define JucePlugin_VSTNumMidiInputs       16

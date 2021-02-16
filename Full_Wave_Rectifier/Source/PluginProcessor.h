@@ -10,15 +10,20 @@
 
 #include <JuceHeader.h>
 
+#define inputSliderId "input"
+#define inputSliderName "Input"
+#define trimSliderId "trim"
+#define trimSliderName "Trim"
+
 //==============================================================================
 /**
 */
-class ViatorRectificationAudioProcessor  : public juce::AudioProcessor
+class Full_Wave_RectifierAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    ViatorRectificationAudioProcessor();
-    ~ViatorRectificationAudioProcessor() override;
+    Full_Wave_RectifierAudioProcessor();
+    ~Full_Wave_RectifierAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -53,10 +58,10 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
     
-    float halfWaveRectification;
-    float fullWaveRectification;
+    juce::AudioProcessorValueTreeState treeState;
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ViatorRectificationAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Full_Wave_RectifierAudioProcessor)
 };

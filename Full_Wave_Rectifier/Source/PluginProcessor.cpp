@@ -10,7 +10,7 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-ViatorRectificationAudioProcessor::ViatorRectificationAudioProcessor()
+Full_Wave_RectifierAudioProcessor::Full_Wave_RectifierAudioProcessor()
 #ifndef JucePlugin_PreferredChannelConfigurations
      : AudioProcessor (BusesProperties()
                      #if ! JucePlugin_IsMidiEffect
@@ -19,22 +19,37 @@ ViatorRectificationAudioProcessor::ViatorRectificationAudioProcessor()
                       #endif
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
-                       )
+                       ),
+treeState (*this, nullptr, "PARAMETER", createParameterLayout())
 #endif
 {
 }
 
-ViatorRectificationAudioProcessor::~ViatorRectificationAudioProcessor()
+Full_Wave_RectifierAudioProcessor::~Full_Wave_RectifierAudioProcessor()
 {
 }
 
+juce::AudioProcessorValueTreeState::ParameterLayout Full_Wave_RectifierAudioProcessor::createParameterLayout()
+{
+    std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
+    params.reserve(2);
+    
+    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, -24.0f, 24.0f, 0.0f);
+    auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimSliderId, trimSliderName, -24.0f, 24.0f, 0.0f);
+
+    params.push_back(std::move(inputParam));
+    params.push_back(std::move(trimParam));
+    
+    return { params.begin(), params.end() };
+}
+
 //==============================================================================
-const juce::String ViatorRectificationAudioProcessor::getName() const
+const juce::String Full_Wave_RectifierAudioProcessor::getName() const
 {
     return JucePlugin_Name;
 }
 
-bool ViatorRectificationAudioProcessor::acceptsMidi() const
+bool Full_Wave_RectifierAudioProcessor::acceptsMidi() const
 {
    #if JucePlugin_WantsMidiInput
     return true;
@@ -43,7 +58,7 @@ bool ViatorRectificationAudioProcessor::acceptsMidi() const
    #endif
 }
 
-bool ViatorRectificationAudioProcessor::producesMidi() const
+bool Full_Wave_RectifierAudioProcessor::producesMidi() const
 {
    #if JucePlugin_ProducesMidiOutput
     return true;
@@ -52,7 +67,7 @@ bool ViatorRectificationAudioProcessor::producesMidi() const
    #endif
 }
 
-bool ViatorRectificationAudioProcessor::isMidiEffect() const
+bool Full_Wave_RectifierAudioProcessor::isMidiEffect() const
 {
    #if JucePlugin_IsMidiEffect
     return true;
@@ -61,50 +76,50 @@ bool ViatorRectificationAudioProcessor::isMidiEffect() const
    #endif
 }
 
-double ViatorRectificationAudioProcessor::getTailLengthSeconds() const
+double Full_Wave_RectifierAudioProcessor::getTailLengthSeconds() const
 {
     return 0.0;
 }
 
-int ViatorRectificationAudioProcessor::getNumPrograms()
+int Full_Wave_RectifierAudioProcessor::getNumPrograms()
 {
     return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
                 // so this should be at least 1, even if you're not really implementing programs.
 }
 
-int ViatorRectificationAudioProcessor::getCurrentProgram()
+int Full_Wave_RectifierAudioProcessor::getCurrentProgram()
 {
     return 0;
 }
 
-void ViatorRectificationAudioProcessor::setCurrentProgram (int index)
+void Full_Wave_RectifierAudioProcessor::setCurrentProgram (int index)
 {
 }
 
-const juce::String ViatorRectificationAudioProcessor::getProgramName (int index)
+const juce::String Full_Wave_RectifierAudioProcessor::getProgramName (int index)
 {
     return {};
 }
 
-void ViatorRectificationAudioProcessor::changeProgramName (int index, const juce::String& newName)
+void Full_Wave_RectifierAudioProcessor::changeProgramName (int index, const juce::String& newName)
 {
 }
 
 //==============================================================================
-void ViatorRectificationAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
+void Full_Wave_RectifierAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
 }
 
-void ViatorRectificationAudioProcessor::releaseResources()
+void Full_Wave_RectifierAudioProcessor::releaseResources()
 {
     // When playback stops, you can use this as an opportunity to free up any
     // spare memory, etc.
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool ViatorRectificationAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
+bool Full_Wave_RectifierAudioProcessor::isBusesLayoutSupported (const BusesLayout& layouts) const
 {
   #if JucePlugin_IsMidiEffect
     juce::ignoreUnused (layouts);
@@ -112,6 +127,8 @@ bool ViatorRectificationAudioProcessor::isBusesLayoutSupported (const BusesLayou
   #else
     // This is the place where you check if the layout is supported.
     // In this template code we only support mono or stereo.
+    // Some plugin hosts, such as certain GarageBand versions, will only
+    // load plugins that support stereo bus layouts.
     if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono()
      && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
         return false;
@@ -127,7 +144,7 @@ bool ViatorRectificationAudioProcessor::isBusesLayoutSupported (const BusesLayou
 }
 #endif
 
-void ViatorRectificationAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+void Full_Wave_RectifierAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
     auto totalNumInputChannels  = getTotalNumInputChannels();
@@ -138,56 +155,55 @@ void ViatorRectificationAudioProcessor::processBlock (juce::AudioBuffer<float>& 
 
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
+        auto* inputData = buffer.getReadPointer (channel);
         auto* outputData = buffer.getWritePointer (channel);
-        auto* inputData = buffer.getReadPointer(channel);
+                
+        auto* rawInput = treeState.getRawParameterValue(inputSliderId);
+        auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
 
-        for (auto sample = 0; sample < buffer.getNumSamples(); sample++) {
-            
-//            if (inputData[sample] >= 0) {
-//                halfWaveRectification = inputData[sample];
-//            } else {
-//                halfWaveRectification = 0;
-//            }
-            auto input = inputData[sample];
-            
-            if (input >= 0) {
-                fullWaveRectification = input;
+        for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
+                    
+            auto input = inputData[sample] * pow(10, *rawInput * 0.05);
+                    
+            if (input >= 0){
+                outputData[sample] = input * pow(10, *rawTrim * 0.05);
             } else {
-                fullWaveRectification = input * -1;
+                outputData[sample] = (input * -1) * pow(10, *rawTrim * 0.05);
             }
-            outputData[sample] = fullWaveRectification;
         }
     }
 }
 
 //==============================================================================
-bool ViatorRectificationAudioProcessor::hasEditor() const
+bool Full_Wave_RectifierAudioProcessor::hasEditor() const
 {
     return true; // (change this to false if you choose to not supply an editor)
 }
 
-juce::AudioProcessorEditor* ViatorRectificationAudioProcessor::createEditor()
+juce::AudioProcessorEditor* Full_Wave_RectifierAudioProcessor::createEditor()
 {
-    return new ViatorRectificationAudioProcessorEditor (*this);
+    return new Full_Wave_RectifierAudioProcessorEditor (*this);
 }
 
 //==============================================================================
-void ViatorRectificationAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
+void Full_Wave_RectifierAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    juce::MemoryOutputStream stream(destData, false);
+    treeState.state.writeToStream (stream);
 }
 
-void ViatorRectificationAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
+void Full_Wave_RectifierAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    juce::ValueTree tree = juce::ValueTree::readFromData (data, size_t (sizeInBytes));
+        
+    if (tree.isValid()) {
+        treeState.state = tree;
+    }
 }
 
 //==============================================================================
 // This creates new instances of the plugin..
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new ViatorRectificationAudioProcessor();
+    return new Full_Wave_RectifierAudioProcessor();
 }
