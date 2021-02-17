@@ -5,726 +5,726 @@
 	};
 	objectVersion = 46;
 	objects = {
-		6499691A5C582513AF654E78 = {
+		9CA75607B77A9AE14377FBAE = {
 			isa = PBXBuildFile;
-			fileRef = 8885D6CE0F6000814EFAFC00;
+			fileRef = 51C84D2FB03B7EF101A0C2D3;
 		};
-		18697AC2B4A49FFB22792628 = {
+		D224E15A447E83BDFBD8472B = {
 			isa = PBXBuildFile;
-			fileRef = 8101FC185E2C1262E37938B7;
+			fileRef = 09313F3D90B9760BE7240A73;
 		};
-		7399F83C6D5BDC3C049B8058 = {
+		EF7161E49AEA7FBB8403F53A = {
 			isa = PBXBuildFile;
-			fileRef = 3C029925FE66C3F5A0E2D179;
+			fileRef = 682FE63A84ACCF77F8336E91;
 		};
-		6B60566441C7A06A25AB65B8 = {
+		FA4EDBAB67A206446AEC5F33 = {
 			isa = PBXBuildFile;
-			fileRef = B6560CE9F68912754A746BBF;
+			fileRef = 0C6C61805F9D560A16B4FE55;
 		};
-		8ACB942BD6B2A46411140E40 = {
+		6A37365773DCE4CFA9AE6899 = {
 			isa = PBXBuildFile;
-			fileRef = 2D755B9E6F4640C5A744725B;
+			fileRef = D8038314F0A24D588BE8B51D;
 		};
-		8AA79F7711A7506DE5E71D14 = {
+		6A97DF6EED1EEED8F292025E = {
 			isa = PBXBuildFile;
-			fileRef = 4A51CBBF05DF02515502546D;
+			fileRef = E015599DC1428081FC0FF3CF;
 		};
-		F39F3CE0BEA0949FFCCCE89F = {
+		4D0445000926DC4D562C73F2 = {
 			isa = PBXBuildFile;
-			fileRef = E80313EBAF7A4DEF61724B88;
+			fileRef = A53960C2180493DE1A1EB62B;
 		};
-		B63309F6095E1E6C532AA792 = {
+		BDDFE90614CF03FA0D6AD8A1 = {
 			isa = PBXBuildFile;
-			fileRef = 72656545F15697A28EDBE624;
+			fileRef = 44152D1F26F2CB99088C9C39;
 		};
-		62555C696465D7FE280F02A5 = {
+		D0C2002492E86F0383ABA2C0 = {
 			isa = PBXBuildFile;
-			fileRef = 19B423374BBFFD9016C03BB4;
+			fileRef = 5A17456F7C9A944C1A8D158E;
 		};
-		660D6CE45C200411487ECED4 = {
+		BB1146B9C3A01F967626E43B = {
 			isa = PBXBuildFile;
-			fileRef = 11CB817BA803564C89F3AD91;
+			fileRef = 1B40741144E9AD94378CDB1A;
 		};
-		72465C70C86992BEF51CAE64 = {
+		A1DB8518AB3EAA3293302281 = {
 			isa = PBXBuildFile;
-			fileRef = 48CDEAC1BE0B7F51A86536AA;
+			fileRef = B5631BC3E892CC910184384D;
 		};
-		8A921BAC842BE3A28D21C0A9 = {
+		99EC458E24F96DCEE1C193B3 = {
 			isa = PBXBuildFile;
-			fileRef = 903784522313C402A509C1E1;
+			fileRef = B8633D5AEC0F20816CC0D882;
 		};
-		8420D6D4BDFEC55C901A884A = {
+		D6BAFFBBDFEE51E1DD293B11 = {
 			isa = PBXBuildFile;
-			fileRef = E915F33FAB82A92415BB2419;
+			fileRef = 1816120CA1DA9A8BB30E9BFD;
 		};
-		A08AB2B2352B94107488BC59 = {
+		C24C22AE2867144B5FCBDDB0 = {
 			isa = PBXBuildFile;
-			fileRef = 1B64629C878738516BD6941C;
+			fileRef = 62E1B2D634B2ADC321A62C0B;
 		};
-		F04E25EAAE6AFB60DC8D0930 = {
+		A7347C4190D8D95CD4084026 = {
 			isa = PBXBuildFile;
-			fileRef = 9799965AA175EBD5083FF8AD;
+			fileRef = 171D78E9A900EB4343A71550;
 		};
-		1B12AFE2492313B1E2708761 = {
+		44B7FE27E499D2CA3BCA192B = {
 			isa = PBXBuildFile;
-			fileRef = D7662D7811F2983AFCD70F5B;
+			fileRef = 3BE898024188B299CD712152;
 		};
-		E95DBA22249C96948FE815F3 = {
+		8F038475B12E85BC24869700 = {
 			isa = PBXBuildFile;
-			fileRef = 408C97C9083A4711EBC97798;
+			fileRef = 118FA39123E0B9AFCB8FFF09;
 		};
-		3640C69B73A5385B5E7C3A99 = {
+		8F3421820B90EF98A8BD84A1 = {
 			isa = PBXBuildFile;
-			fileRef = BE1C62A86C349FCC9C433032;
+			fileRef = 380871AFD82881BC2623B626;
 		};
-		C988A74761BE8738465DBDC4 = {
+		63EDC9D6BC6396B55B495F94 = {
 			isa = PBXBuildFile;
-			fileRef = DEF080EC6F46AD2D78FADEE9;
+			fileRef = CC3C9F1BFDF959F824AFBE1F;
 		};
-		CC65CBBD9C7D755FF430CA14 = {
+		700D7D4D843ACFCE660DB998 = {
 			isa = PBXBuildFile;
-			fileRef = E14337AE22B03EDBAB506E9F;
+			fileRef = 0536AB9683C6E3ACD552F69C;
 		};
-		39C4A6B68B72928DD274174D = {
+		05962D50C32D61C030FAEE01 = {
 			isa = PBXBuildFile;
-			fileRef = 117DD857D0F530DFBF5A0810;
+			fileRef = 6F15F563292968E4D0B289DE;
 		};
-		4787EEB0E8D8D443E8D8A813 = {
+		088A8B4F36747BB444A9D654 = {
 			isa = PBXBuildFile;
-			fileRef = BCF04CE66EC052464782A001;
+			fileRef = 658A6BD1962494F5BFEB83D3;
 		};
-		0D812CC3E5E0464554089ED6 = {
+		C992E0AAF0CFB3DE19B788A3 = {
 			isa = PBXBuildFile;
-			fileRef = F3A5FC433E36D7DBE2002C8E;
+			fileRef = B798921AD944BB95A0CD2D00;
 		};
-		67A9D2F192C0B3EE35FE4243 = {
+		82A4295DA84AFB30C4C38A03 = {
 			isa = PBXBuildFile;
-			fileRef = DDC4E8B704BFDB0E62CA3BCE;
+			fileRef = C9B586DC860E6B401990FDD6;
 		};
-		7A702E00BDAA92D29F21537E = {
+		7B59D7ED1439453128AE7098 = {
 			isa = PBXBuildFile;
-			fileRef = A81CCD58BBD9855B815F394A;
+			fileRef = A39CF6F9825CB6AB312292CB;
 		};
-		A40DE33BD7B8015707FFCDB9 = {
+		84396643D126566C7499A026 = {
 			isa = PBXBuildFile;
-			fileRef = 696D9E22103C2D81A88FA70B;
+			fileRef = 6609E2C1303A23343A508685;
 		};
-		00C0B99D668EC58E563AC8BB = {
+		B36D1B15D935AE0A29D587CE = {
 			isa = PBXBuildFile;
-			fileRef = 6D0619F43D568B08DC0BE78A;
+			fileRef = 1C08E1CCB668C2FAD7EFBC53;
 		};
-		EED0787E948A0B24584883D1 = {
+		4FF65735875C96D84B64E798 = {
 			isa = PBXBuildFile;
-			fileRef = D2F2417220199BD8A1F9EF56;
+			fileRef = 8211EC426A72D49211D0A5D9;
 		};
-		E24937FF081D8AFF3F42B3EC = {
+		6343095CACA031140CBE1FCC = {
 			isa = PBXBuildFile;
-			fileRef = 7FA97AC2A770AE621F18A726;
+			fileRef = 685B8143DC8461A0A63A0B7D;
 		};
-		F52B300703A1C605EC92EFCE = {
+		AC823259DD59E53CB526B10F = {
 			isa = PBXBuildFile;
-			fileRef = 3A4B3B60E8F2CD41A7BF0F10;
+			fileRef = AEA8F2C84BEB6641E2ADFB0E;
 		};
-		1A9038317E61371B03242249 = {
+		FB3A09F01EE2533125D3803D = {
 			isa = PBXBuildFile;
-			fileRef = A851D09A86CF666D3D9EFA1E;
+			fileRef = D0FCB7AD35A4E3694C3AFB26;
 		};
-		FCB34C61E12A4E8777A36E05 = {
+		9D6BD45B789FD174242BA091 = {
 			isa = PBXBuildFile;
-			fileRef = D783E08DD9AB2319AE54F183;
+			fileRef = F84E930C60E8345A79FF72BD;
 		};
-		03BBD419821DA01A59699FDF = {
+		356478FDFF13C5F835E7DF2F = {
 			isa = PBXBuildFile;
-			fileRef = 43B7CC76A83ED079F96C7DF6;
+			fileRef = F11DE4F3D3E10DB76493F105;
 		};
-		0FC873AB0761344C4C9F26F5 = {
+		8BA110327B4C48C6B8B9ACB0 = {
 			isa = PBXBuildFile;
-			fileRef = D80FE7965362B8C8E0A07643;
+			fileRef = 1DFA22156617F5A1E375420B;
 		};
-		2AB79DC0C4037D06A8A90337 = {
+		31586F8B33F1E9BEC0F0D762 = {
 			isa = PBXBuildFile;
-			fileRef = 7E0A711558015398A0D5CC88;
+			fileRef = 5901915E081B5A6ACA3D5977;
 		};
-		B5748C20036CC28B1D73BADB = {
+		7F11ABAE3C18AE53FB4D9488 = {
 			isa = PBXBuildFile;
-			fileRef = 5862B7C658244AE912D18B31;
+			fileRef = 5408D2355DF4EF0C45797521;
 		};
-		F13153207D5752040978EA8A = {
+		7B483AAF561AE6A5EA682DAB = {
 			isa = PBXBuildFile;
-			fileRef = 5CC10E3467FB35FD703A95DB;
+			fileRef = 898ACF4E8985E993420CD6CE;
 		};
-		4321D3BE66182A6297A45277 = {
+		2830E221E07403CEED1D6318 = {
 			isa = PBXBuildFile;
-			fileRef = 33B566CE6BE584626E02E60E;
+			fileRef = EB0EBB603EA74C580ABF6B1A;
 		};
-		AE6A2F06294EDBBBA0F7DD17 = {
+		4CB90E2A94CD8A3A3697EBED = {
 			isa = PBXBuildFile;
-			fileRef = ABC1BA69293AE3FCE24D961B;
+			fileRef = F394047B67533151C3CB9E1D;
 		};
-		117DD857D0F530DFBF5A0810 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_basics.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_basics.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		11CB817BA803564C89F3AD91 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = CoreAudio.framework;
-			path = System/Library/Frameworks/CoreAudio.framework;
-			sourceTree = SDKROOT;
-		};
-		144D3F799242DC6DA4B1BE9B = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = JuceHeader.h;
-			path = ../../JuceLibraryCode/JuceHeader.h;
-			sourceTree = "SOURCE_ROOT";
-		};
-		19B423374BBFFD9016C03BB4 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Cocoa.framework;
-			path = System/Library/Frameworks/Cocoa.framework;
-			sourceTree = SDKROOT;
-		};
-		1B64629C878738516BD6941C = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Foundation.framework;
-			path = System/Library/Frameworks/Foundation.framework;
-			sourceTree = SDKROOT;
-		};
-		2D755B9E6F4640C5A744725B = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = AudioUnit.framework;
-			path = System/Library/Frameworks/AudioUnit.framework;
-			sourceTree = SDKROOT;
-		};
-		33B566CE6BE584626E02E60E = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_gui_basics.mm";
-			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		3A4B3B60E8F2CD41A7BF0F10 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = "include_juce_audio_plugin_client_VST3.cpp";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp";
-			sourceTree = "SOURCE_ROOT";
-		};
-		408C97C9083A4711EBC97798 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = WebKit.framework;
-			path = System/Library/Frameworks/WebKit.framework;
-			sourceTree = SDKROOT;
-		};
-		43B7CC76A83ED079F96C7DF6 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_core.mm";
-			path = "../../JuceLibraryCode/include_juce_core.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		48CDEAC1BE0B7F51A86536AA = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = CoreAudioKit.framework;
-			path = System/Library/Frameworks/CoreAudioKit.framework;
-			sourceTree = SDKROOT;
-		};
-		4A51CBBF05DF02515502546D = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Accelerate.framework;
-			path = System/Library/Frameworks/Accelerate.framework;
-			sourceTree = SDKROOT;
-		};
-		5862B7C658244AE912D18B31 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_events.mm";
-			path = "../../JuceLibraryCode/include_juce_events.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		5CC10E3467FB35FD703A95DB = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_graphics.mm";
-			path = "../../JuceLibraryCode/include_juce_graphics.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		696D9E22103C2D81A88FA70B = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_plugin_client_AU_2.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		6D0619F43D568B08DC0BE78A = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = "include_juce_audio_plugin_client_Standalone.cpp";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp";
-			sourceTree = "SOURCE_ROOT";
-		};
-		6F238D048338847CFE65DF75 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = PluginProcessor.h;
-			path = ../../Source/PluginProcessor.h;
-			sourceTree = "SOURCE_ROOT";
-		};
-		72656545F15697A28EDBE624 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = Carbon.framework;
-			path = System/Library/Frameworks/Carbon.framework;
-			sourceTree = SDKROOT;
-		};
-		77BD5BF07F39BB4402D47F60 = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			name = "Info-AU.plist";
-			path = "Info-AU.plist";
-			sourceTree = "SOURCE_ROOT";
-		};
-		85EE2BD2D936944276481426 = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			name = "Info-Standalone_Plugin.plist";
-			path = "Info-Standalone_Plugin.plist";
-			sourceTree = "SOURCE_ROOT";
-		};
-		8885D6CE0F6000814EFAFC00 = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			path = ViatorHardClipper.vst3;
-			sourceTree = "BUILT_PRODUCTS_DIR";
-		};
-		8101FC185E2C1262E37938B7 = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			path = ViatorHardClipper.component;
-			sourceTree = "BUILT_PRODUCTS_DIR";
-		};
-		3C029925FE66C3F5A0E2D179 = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.application;
-			includeInIndex = 0;
-			path = ViatorHardClipper.app;
-			sourceTree = "BUILT_PRODUCTS_DIR";
-		};
-		67E911F1EF2DA13B7FD344E6 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_devices";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_devices";
-			sourceTree = "<absolute>";
-		};
-		7E0A711558015398A0D5CC88 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_dsp.mm";
-			path = "../../JuceLibraryCode/include_juce_dsp.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		7FA97AC2A770AE621F18A726 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_plugin_client_VST_utils.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		903784522313C402A509C1E1 = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = CoreMIDI.framework;
-			path = System/Library/Frameworks/CoreMIDI.framework;
-			sourceTree = SDKROOT;
-		};
-		9799965AA175EBD5083FF8AD = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = IOKit.framework;
-			path = System/Library/Frameworks/IOKit.framework;
-			sourceTree = SDKROOT;
-		};
-		99189691DA40876B174C1843 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_gui_extra";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_gui_extra";
-			sourceTree = "<absolute>";
-		};
-		9B8A235019DABA2B255C2C49 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_processors";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_processors";
-			sourceTree = "<absolute>";
-		};
-		9E060C1F5BFD1C957C1C7A23 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_data_structures";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_data_structures";
-			sourceTree = "<absolute>";
-		};
-		A25FC8389C9DA3EAE571A085 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = PluginEditor.h;
-			path = ../../Source/PluginEditor.h;
-			sourceTree = "SOURCE_ROOT";
-		};
-		A81CCD58BBD9855B815F394A = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_plugin_client_AU_1.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		A851D09A86CF666D3D9EFA1E = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_processors.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_processors.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		ABC1BA69293AE3FCE24D961B = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_gui_extra.mm";
-			path = "../../JuceLibraryCode/include_juce_gui_extra.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		B5FCBA97C2699BBE78020BFF = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_dsp";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_dsp";
-			sourceTree = "<absolute>";
-		};
-		B6560CE9F68912754A746BBF = {
-			isa = PBXFileReference;
-			explicitFileType = archive.ar;
-			includeInIndex = 0;
-			path = libViatorHardClipper.a;
-			sourceTree = "BUILT_PRODUCTS_DIR";
-		};
-		BCF04CE66EC052464782A001 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_devices.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_devices.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		BE1C62A86C349FCC9C433032 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file.nib;
-			name = RecentFilesMenuTemplate.nib;
-			path = RecentFilesMenuTemplate.nib;
-			sourceTree = "SOURCE_ROOT";
-		};
-		C92FFB4FD9A4FEAA881622F7 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.c.h;
-			name = JucePluginDefines.h;
-			path = ../../JuceLibraryCode/JucePluginDefines.h;
-			sourceTree = "SOURCE_ROOT";
-		};
-		D2C903AA85FEF37302446F48 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_basics";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_basics";
-			sourceTree = "<absolute>";
-		};
-		D2F2417220199BD8A1F9EF56 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = "include_juce_audio_plugin_client_utils.cpp";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_utils.cpp";
-			sourceTree = "SOURCE_ROOT";
-		};
-		D35E9BB7F1D36C38C9045721 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_plugin_client";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client";
-			sourceTree = "<absolute>";
-		};
-		D7662D7811F2983AFCD70F5B = {
-			isa = PBXFileReference;
-			lastKnownFileType = wrapper.framework;
-			name = QuartzCore.framework;
-			path = System/Library/Frameworks/QuartzCore.framework;
-			sourceTree = SDKROOT;
-		};
-		D783E08DD9AB2319AE54F183 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_audio_utils.mm";
-			path = "../../JuceLibraryCode/include_juce_audio_utils.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		D80FE7965362B8C8E0A07643 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.objcpp;
-			name = "include_juce_data_structures.mm";
-			path = "../../JuceLibraryCode/include_juce_data_structures.mm";
-			sourceTree = "SOURCE_ROOT";
-		};
-		D85C16DD4C03C47F895C43B6 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_formats";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_formats";
-			sourceTree = "<absolute>";
-		};
-		D9D7EBF664869508895AF4B9 = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_gui_basics";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_gui_basics";
-			sourceTree = "<absolute>";
-		};
-		DDC4E8B704BFDB0E62CA3BCE = {
-			isa = PBXFileReference;
-			lastKnownFileType = file.r;
-			name = "include_juce_audio_plugin_client_AU.r";
-			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU.r";
-			sourceTree = "SOURCE_ROOT";
-		};
-		DEF080EC6F46AD2D78FADEE9 = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.cpp.cpp;
-			name = PluginProcessor.cpp;
-			path = ../../Source/PluginProcessor.cpp;
-			sourceTree = "SOURCE_ROOT";
-		};
-		E14337AE22B03EDBAB506E9F = {
+		0536AB9683C6E3ACD552F69C = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.cpp;
 			name = PluginEditor.cpp;
 			path = ../../Source/PluginEditor.cpp;
 			sourceTree = "SOURCE_ROOT";
 		};
-		E51A67F39FABD8AEE2C4DC53 = {
+		51C84D2FB03B7EF101A0C2D3 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = "Hard_Clipper.vst3";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		09313F3D90B9760BE7240A73 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			includeInIndex = 0;
+			path = "Hard_Clipper.component";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		1087EE0D5BA432F9EF8E7028 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
 			name = "juce_graphics";
 			path = "/Users/land00m/Documents/JUCE/modules/juce_graphics";
 			sourceTree = "<absolute>";
 		};
-		E80313EBAF7A4DEF61724B88 = {
+		118FA39123E0B9AFCB8FFF09 = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
-			name = AudioToolbox.framework;
-			path = System/Library/Frameworks/AudioToolbox.framework;
+			name = WebKit.framework;
+			path = System/Library/Frameworks/WebKit.framework;
 			sourceTree = SDKROOT;
 		};
-		E8A32597099A1835F316D3E9 = {
+		171D78E9A900EB4343A71550 = {
 			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_events";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_events";
-			sourceTree = "<absolute>";
+			lastKnownFileType = wrapper.framework;
+			name = IOKit.framework;
+			path = System/Library/Frameworks/IOKit.framework;
+			sourceTree = SDKROOT;
 		};
-		E8F26688EB8281620A0BB6E7 = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			name = "Info-VST3.plist";
-			path = "Info-VST3.plist";
-			sourceTree = "SOURCE_ROOT";
-		};
-		E915F33FAB82A92415BB2419 = {
+		1816120CA1DA9A8BB30E9BFD = {
 			isa = PBXFileReference;
 			lastKnownFileType = wrapper.framework;
 			name = DiscRecording.framework;
 			path = System/Library/Frameworks/DiscRecording.framework;
 			sourceTree = SDKROOT;
 		};
-		F3A5FC433E36D7DBE2002C8E = {
+		1B40741144E9AD94378CDB1A = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudio.framework;
+			path = System/Library/Frameworks/CoreAudio.framework;
+			sourceTree = SDKROOT;
+		};
+		1C08E1CCB668C2FAD7EFBC53 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_audio_plugin_client_Standalone.cpp";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		1DFA22156617F5A1E375420B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_data_structures.mm";
+			path = "../../JuceLibraryCode/include_juce_data_structures.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		21BC39CD5F2BFE327D61A561 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_dsp";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_dsp";
+			sourceTree = "<absolute>";
+		};
+		2E8305417D2F55F81C555FD9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_devices";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_devices";
+			sourceTree = "<absolute>";
+		};
+		329830608ECB81AE4316D3FF = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_basics";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_basics";
+			sourceTree = "<absolute>";
+		};
+		380871AFD82881BC2623B626 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.nib;
+			name = RecentFilesMenuTemplate.nib;
+			path = RecentFilesMenuTemplate.nib;
+			sourceTree = "SOURCE_ROOT";
+		};
+		3987B1DD8BC270439F3070E6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = PluginProcessor.h;
+			path = ../../Source/PluginProcessor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		3BE898024188B299CD712152 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = QuartzCore.framework;
+			path = System/Library/Frameworks/QuartzCore.framework;
+			sourceTree = SDKROOT;
+		};
+		682FE63A84ACCF77F8336E91 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = "Hard_Clipper.app";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		0C6C61805F9D560A16B4FE55 = {
+			isa = PBXFileReference;
+			explicitFileType = archive.ar;
+			includeInIndex = 0;
+			path = "libHard_Clipper.a";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+		16C605BEDE1D57F5E4A0E072 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_formats";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_formats";
+			sourceTree = "<absolute>";
+		};
+		1CF393FAE1671657D90F19C7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_processors";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_processors";
+			sourceTree = "<absolute>";
+		};
+		44152D1F26F2CB99088C9C39 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Carbon.framework;
+			path = System/Library/Frameworks/Carbon.framework;
+			sourceTree = SDKROOT;
+		};
+		526FB7B9E6863BC5A22EAA6A = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_events";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_events";
+			sourceTree = "<absolute>";
+		};
+		5408D2355DF4EF0C45797521 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_events.mm";
+			path = "../../JuceLibraryCode/include_juce_events.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5901915E081B5A6ACA3D5977 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_dsp.mm";
+			path = "../../JuceLibraryCode/include_juce_dsp.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		5A17456F7C9A944C1A8D158E = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Cocoa.framework;
+			path = System/Library/Frameworks/Cocoa.framework;
+			sourceTree = SDKROOT;
+		};
+		62E1B2D634B2ADC321A62C0B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Foundation.framework;
+			path = System/Library/Frameworks/Foundation.framework;
+			sourceTree = SDKROOT;
+		};
+		658A6BD1962494F5BFEB83D3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_devices.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_devices.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6609E2C1303A23343A508685 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_AU_2.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_2.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		685B8143DC8461A0A63A0B7D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_VST_utils.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST_utils.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		6F15F563292968E4D0B289DE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_basics.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_basics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		7115B677EE34815964A126F3 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_gui_extra";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_gui_extra";
+			sourceTree = "<absolute>";
+		};
+		80F672C602D434FE28DBF0E7 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = PluginEditor.h;
+			path = ../../Source/PluginEditor.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		8211EC426A72D49211D0A5D9 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_audio_plugin_client_utils.cpp";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_utils.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		888D462C4BF1F28C1F8D1C88 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_gui_basics";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_gui_basics";
+			sourceTree = "<absolute>";
+		};
+		898ACF4E8985E993420CD6CE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_graphics.mm";
+			path = "../../JuceLibraryCode/include_juce_graphics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		95690EDEE8DEF5C0DBA8885E = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_data_structures";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_data_structures";
+			sourceTree = "<absolute>";
+		};
+		9843B5D259541516D59A022E = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_plugin_client";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client";
+			sourceTree = "<absolute>";
+		};
+		A39CF6F9825CB6AB312292CB = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_plugin_client_AU_1.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU_1.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		A53960C2180493DE1A1EB62B = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioToolbox.framework;
+			path = System/Library/Frameworks/AudioToolbox.framework;
+			sourceTree = SDKROOT;
+		};
+		AEA8F2C84BEB6641E2ADFB0E = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = "include_juce_audio_plugin_client_VST3.cpp";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B3F5FCBA5F96908A2CEF8D9D = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info-VST3.plist";
+			path = "Info-VST3.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		B5631BC3E892CC910184384D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = CoreAudioKit.framework;
+			path = System/Library/Frameworks/CoreAudioKit.framework;
+			sourceTree = SDKROOT;
+		};
+		B798921AD944BB95A0CD2D00 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
 			name = "include_juce_audio_formats.mm";
 			path = "../../JuceLibraryCode/include_juce_audio_formats.mm";
 			sourceTree = "SOURCE_ROOT";
 		};
-		F61BF5727988D0AB184881FA = {
+		B8633D5AEC0F20816CC0D882 = {
 			isa = PBXFileReference;
-			lastKnownFileType = file;
-			name = "juce_audio_utils";
-			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_utils";
-			sourceTree = "<absolute>";
+			lastKnownFileType = wrapper.framework;
+			name = CoreMIDI.framework;
+			path = System/Library/Frameworks/CoreMIDI.framework;
+			sourceTree = SDKROOT;
 		};
-		FE643162E5BA750F3C1DF479 = {
+		BFADD24DF3319A7DDC0AAA9F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = JucePluginDefines.h;
+			path = ../../JuceLibraryCode/JucePluginDefines.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		C9B586DC860E6B401990FDD6 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.r;
+			name = "include_juce_audio_plugin_client_AU.r";
+			path = "../../JuceLibraryCode/include_juce_audio_plugin_client_AU.r";
+			sourceTree = "SOURCE_ROOT";
+		};
+		C9F30EC80F3AB94E2B0D8F5F = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info-Standalone_Plugin.plist";
+			path = "Info-Standalone_Plugin.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		CC3C9F1BFDF959F824AFBE1F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.cpp;
+			name = PluginProcessor.cpp;
+			path = ../../Source/PluginProcessor.cpp;
+			sourceTree = "SOURCE_ROOT";
+		};
+		CED6589B88CEE2FFCCA81D8B = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.c.h;
+			name = JuceHeader.h;
+			path = ../../JuceLibraryCode/JuceHeader.h;
+			sourceTree = "SOURCE_ROOT";
+		};
+		D0FCB7AD35A4E3694C3AFB26 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_processors.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_processors.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		D8038314F0A24D588BE8B51D = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = AudioUnit.framework;
+			path = System/Library/Frameworks/AudioUnit.framework;
+			sourceTree = SDKROOT;
+		};
+		E015599DC1428081FC0FF3CF = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.framework;
+			name = Accelerate.framework;
+			path = System/Library/Frameworks/Accelerate.framework;
+			sourceTree = SDKROOT;
+		};
+		E63AEA216118C5E91FDBF31C = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info-AU.plist";
+			path = "Info-AU.plist";
+			sourceTree = "SOURCE_ROOT";
+		};
+		EB0EBB603EA74C580ABF6B1A = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_gui_basics.mm";
+			path = "../../JuceLibraryCode/include_juce_gui_basics.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F11DE4F3D3E10DB76493F105 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_core.mm";
+			path = "../../JuceLibraryCode/include_juce_core.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F394047B67533151C3CB9E1D = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_gui_extra.mm";
+			path = "../../JuceLibraryCode/include_juce_gui_extra.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F84E930C60E8345A79FF72BD = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.cpp.objcpp;
+			name = "include_juce_audio_utils.mm";
+			path = "../../JuceLibraryCode/include_juce_audio_utils.mm";
+			sourceTree = "SOURCE_ROOT";
+		};
+		F8B64A966325A18359ED0611 = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
 			name = "juce_core";
 			path = "/Users/land00m/Documents/JUCE/modules/juce_core";
 			sourceTree = "<absolute>";
 		};
-		54394F37A33F6FB30FB5D57F = {
+		FAEDE0DC64F0578E67E69BDE = {
+			isa = PBXFileReference;
+			lastKnownFileType = file;
+			name = "juce_audio_utils";
+			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_utils";
+			sourceTree = "<absolute>";
+		};
+		5BC88AAEF7E8B24417F60D1B = {
 			isa = PBXGroup;
 			children = (
-				DEF080EC6F46AD2D78FADEE9,
-				6F238D048338847CFE65DF75,
-				E14337AE22B03EDBAB506E9F,
-				A25FC8389C9DA3EAE571A085,
+				CC3C9F1BFDF959F824AFBE1F,
+				3987B1DD8BC270439F3070E6,
+				0536AB9683C6E3ACD552F69C,
+				80F672C602D434FE28DBF0E7,
 			);
 			name = Source;
 			sourceTree = "<group>";
 		};
-		22A34BE36034AEEF2C867AA1 = {
+		7E0A39227F702FA25B13DB66 = {
 			isa = PBXGroup;
 			children = (
-				54394F37A33F6FB30FB5D57F,
+				5BC88AAEF7E8B24417F60D1B,
 			);
-			name = ViatorHardClipper;
+			name = "Hard_Clipper";
 			sourceTree = "<group>";
 		};
-		7FE662EE678207C95F912F12 = {
+		664966616E06A01F7EA20E1F = {
 			isa = PBXGroup;
 			children = (
-				D2C903AA85FEF37302446F48,
-				67E911F1EF2DA13B7FD344E6,
-				D85C16DD4C03C47F895C43B6,
-				D35E9BB7F1D36C38C9045721,
-				9B8A235019DABA2B255C2C49,
-				F61BF5727988D0AB184881FA,
-				FE643162E5BA750F3C1DF479,
-				9E060C1F5BFD1C957C1C7A23,
-				B5FCBA97C2699BBE78020BFF,
-				E8A32597099A1835F316D3E9,
-				E51A67F39FABD8AEE2C4DC53,
-				D9D7EBF664869508895AF4B9,
-				99189691DA40876B174C1843,
+				329830608ECB81AE4316D3FF,
+				2E8305417D2F55F81C555FD9,
+				16C605BEDE1D57F5E4A0E072,
+				9843B5D259541516D59A022E,
+				1CF393FAE1671657D90F19C7,
+				FAEDE0DC64F0578E67E69BDE,
+				F8B64A966325A18359ED0611,
+				95690EDEE8DEF5C0DBA8885E,
+				21BC39CD5F2BFE327D61A561,
+				526FB7B9E6863BC5A22EAA6A,
+				1087EE0D5BA432F9EF8E7028,
+				888D462C4BF1F28C1F8D1C88,
+				7115B677EE34815964A126F3,
 			);
 			name = "JUCE Modules";
 			sourceTree = "<group>";
 		};
-		494E453DD7B77EC423032ABC = {
+		01BB7522C344F108581A9A63 = {
 			isa = PBXGroup;
 			children = (
-				117DD857D0F530DFBF5A0810,
-				BCF04CE66EC052464782A001,
-				F3A5FC433E36D7DBE2002C8E,
-				DDC4E8B704BFDB0E62CA3BCE,
-				A81CCD58BBD9855B815F394A,
-				696D9E22103C2D81A88FA70B,
-				6D0619F43D568B08DC0BE78A,
-				D2F2417220199BD8A1F9EF56,
-				7FA97AC2A770AE621F18A726,
-				3A4B3B60E8F2CD41A7BF0F10,
-				A851D09A86CF666D3D9EFA1E,
-				D783E08DD9AB2319AE54F183,
-				43B7CC76A83ED079F96C7DF6,
-				D80FE7965362B8C8E0A07643,
-				7E0A711558015398A0D5CC88,
-				5862B7C658244AE912D18B31,
-				5CC10E3467FB35FD703A95DB,
-				33B566CE6BE584626E02E60E,
-				ABC1BA69293AE3FCE24D961B,
-				144D3F799242DC6DA4B1BE9B,
-				C92FFB4FD9A4FEAA881622F7,
+				6F15F563292968E4D0B289DE,
+				658A6BD1962494F5BFEB83D3,
+				B798921AD944BB95A0CD2D00,
+				C9B586DC860E6B401990FDD6,
+				A39CF6F9825CB6AB312292CB,
+				6609E2C1303A23343A508685,
+				1C08E1CCB668C2FAD7EFBC53,
+				8211EC426A72D49211D0A5D9,
+				685B8143DC8461A0A63A0B7D,
+				AEA8F2C84BEB6641E2ADFB0E,
+				D0FCB7AD35A4E3694C3AFB26,
+				F84E930C60E8345A79FF72BD,
+				F11DE4F3D3E10DB76493F105,
+				1DFA22156617F5A1E375420B,
+				5901915E081B5A6ACA3D5977,
+				5408D2355DF4EF0C45797521,
+				898ACF4E8985E993420CD6CE,
+				EB0EBB603EA74C580ABF6B1A,
+				F394047B67533151C3CB9E1D,
+				CED6589B88CEE2FFCCA81D8B,
+				BFADD24DF3319A7DDC0AAA9F,
 			);
 			name = "JUCE Library Code";
 			sourceTree = "<group>";
 		};
-		8E6CEC12B91C1BAE4E571050 = {
+		D3FC5B6A21F97A8C994595D7 = {
 			isa = PBXGroup;
 			children = (
-				E8F26688EB8281620A0BB6E7,
-				77BD5BF07F39BB4402D47F60,
-				85EE2BD2D936944276481426,
-				BE1C62A86C349FCC9C433032,
+				B3F5FCBA5F96908A2CEF8D9D,
+				E63AEA216118C5E91FDBF31C,
+				C9F30EC80F3AB94E2B0D8F5F,
+				380871AFD82881BC2623B626,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		7D5E9CC627C78F3DE12B6A9D = {
+		6916FD1D6FE5A24F0CA76268 = {
 			isa = PBXGroup;
 			children = (
-				2D755B9E6F4640C5A744725B,
-				4A51CBBF05DF02515502546D,
-				E80313EBAF7A4DEF61724B88,
-				72656545F15697A28EDBE624,
-				19B423374BBFFD9016C03BB4,
-				11CB817BA803564C89F3AD91,
-				48CDEAC1BE0B7F51A86536AA,
-				903784522313C402A509C1E1,
-				E915F33FAB82A92415BB2419,
-				1B64629C878738516BD6941C,
-				9799965AA175EBD5083FF8AD,
-				D7662D7811F2983AFCD70F5B,
-				408C97C9083A4711EBC97798,
+				D8038314F0A24D588BE8B51D,
+				E015599DC1428081FC0FF3CF,
+				A53960C2180493DE1A1EB62B,
+				44152D1F26F2CB99088C9C39,
+				5A17456F7C9A944C1A8D158E,
+				1B40741144E9AD94378CDB1A,
+				B5631BC3E892CC910184384D,
+				B8633D5AEC0F20816CC0D882,
+				1816120CA1DA9A8BB30E9BFD,
+				62E1B2D634B2ADC321A62C0B,
+				171D78E9A900EB4343A71550,
+				3BE898024188B299CD712152,
+				118FA39123E0B9AFCB8FFF09,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		11F7187D85FFE483A6C16432 = {
+		192481C8ECB9018CB41A1779 = {
 			isa = PBXGroup;
 			children = (
-				8885D6CE0F6000814EFAFC00,
-				8101FC185E2C1262E37938B7,
-				3C029925FE66C3F5A0E2D179,
-				B6560CE9F68912754A746BBF,
+				51C84D2FB03B7EF101A0C2D3,
+				09313F3D90B9760BE7240A73,
+				682FE63A84ACCF77F8336E91,
+				0C6C61805F9D560A16B4FE55,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		89161DD74011E795183E0740 = {
+		C0B0E8B02DDACBF11A3EC68E = {
 			isa = PBXGroup;
 			children = (
-				22A34BE36034AEEF2C867AA1,
-				7FE662EE678207C95F912F12,
-				494E453DD7B77EC423032ABC,
-				8E6CEC12B91C1BAE4E571050,
-				7D5E9CC627C78F3DE12B6A9D,
-				11F7187D85FFE483A6C16432,
+				7E0A39227F702FA25B13DB66,
+				664966616E06A01F7EA20E1F,
+				01BB7522C344F108581A9A63,
+				D3FC5B6A21F97A8C994595D7,
+				6916FD1D6FE5A24F0CA76268,
+				192481C8ECB9018CB41A1779,
 			);
 			name = Source;
 			sourceTree = "<group>";
 		};
-		5BEAD55F31A93D3ED8A9B68B = {
+		D0BDD2E07275098853C1A294 = {
 			isa = PBXTargetDependency;
-			target = 32204AFB274B520126EB988F;
+			target = 8560749F203976B37F7E8110;
 		};
-		E1D93BA1453184A4D2F0D6DE = {
+		F67CDF76E53269504F6AFA02 = {
 			isa = PBXTargetDependency;
-			target = 4C40FA0634B2AC457476BB9C;
+			target = 5BEAAEAFCD41D570A69D219E;
 		};
-		5F963BCEDC7573D9744A12C2 = {
+		08E6E4985BF0288550D1DAF4 = {
 			isa = PBXTargetDependency;
-			target = FC1285DA8C8D893789BBB6ED;
+			target = 7644A7FB6C1C6E907350AE3B;
 		};
-		3617FDB86B51F5E41C01EFAE = {
+		D4F8AF298A08B8601D2A1215 = {
 			isa = PBXTargetDependency;
-			target = 12C47641218EC07C95F0A51C;
+			target = 428D80FC6ADA116523F18137;
 		};
-		CAA0E7310E4633A2E99FF7D8 = {
+		3EC5B2456EE0C32600AF112C = {
 			isa = PBXTargetDependency;
-			target = 12C47641218EC07C95F0A51C;
+			target = 428D80FC6ADA116523F18137;
 		};
-		5813265902F58804E70FF039 = {
+		539EB6C8B7631F687272E715 = {
 			isa = PBXTargetDependency;
-			target = 12C47641218EC07C95F0A51C;
+			target = 428D80FC6ADA116523F18137;
 		};
-		C5484698C4C6FCB59F208ECE = {
+		153490B8E4EF3A391C66D2F8 = {
 			isa = PBXTargetDependency;
-			target = 12C47641218EC07C95F0A51C;
+			target = 428D80FC6ADA116523F18137;
 		};
-		A3EED1ABFE6CC6EF0F2EDC9B = {
+		2CA875AAED1907AC4BE51D90 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -732,7 +732,7 @@
 			};
 			name = Debug;
 		};
-		53C0DE87CE531D359225F2B2 = {
+		54C3B99972486D6AF426F247 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -740,7 +740,7 @@
 			};
 			name = Release;
 		};
-		DDAE2084607797902C8CD6AD = {
+		FCA1C015D7D0E15511E2ECA7 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -785,13 +785,13 @@
 					"JucePlugin_Build_Standalone=0",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -805,16 +805,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -822,7 +822,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -850,16 +850,16 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-bundle -lViatorHardClipper";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				OTHER_LDFLAGS = "-bundle -lHard_Clipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 				WRAPPER_EXTENSION = vst3;
 			};
 			name = Debug;
 		};
-		76779E509C832538544D8880 = {
+		E87CF1D8756884E5D08E8D90 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -904,13 +904,13 @@
 					"JucePlugin_Build_Standalone=0",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -924,16 +924,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -941,7 +941,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -970,16 +970,16 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-bundle -lViatorHardClipper";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				OTHER_LDFLAGS = "-bundle -lHard_Clipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 				WRAPPER_EXTENSION = vst3;
 			};
 			name = Release;
 		};
-		D8AFECD86807B5B7BC3A29D5 = {
+		71BA6DBA38CF016CA8671714 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1024,13 +1024,13 @@
 					"JucePlugin_Build_Standalone=0",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1044,16 +1044,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1061,7 +1061,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1089,17 +1089,17 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-bundle -lViatorHardClipper";
+				OTHER_LDFLAGS = "-bundle -lHard_Clipper";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 				WRAPPER_EXTENSION = component;
 			};
 			name = Debug;
 		};
-		7D2A01AE466C4F87B0A9DC12 = {
+		3E8A0935D72318B62A9A5A6F = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1144,13 +1144,13 @@
 					"JucePlugin_Build_Standalone=0",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1164,16 +1164,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1181,7 +1181,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1210,17 +1210,17 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-bundle -lViatorHardClipper";
+				OTHER_LDFLAGS = "-bundle -lHard_Clipper";
 				OTHER_REZFLAGS = "-d ppc_$ppc -d i386_$i386 -d ppc64_$ppc64 -d x86_64_$x86_64 -I /System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Versions/A/Headers -I \"$(DEVELOPER_DIR)/Extras/CoreAudio/AudioUnits/AUPublic/AUBase\" -I \"$(DEVELOPER_DIR)/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AudioUnit.framework/Headers\"";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 				WRAPPER_EXTENSION = component;
 			};
 			name = Release;
 		};
-		8FF2418539C6F63EFADA1443 = {
+		7B71C806C095DD3ECF038A6F = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1263,13 +1263,13 @@
 					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1283,16 +1283,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1300,7 +1300,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1325,15 +1325,15 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-lViatorHardClipper";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				OTHER_LDFLAGS = "-lHard_Clipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 			};
 			name = Debug;
 		};
-		EE168CB179897E0B810288A9 = {
+		7399DE635629C58AB3D197AA = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1376,13 +1376,13 @@
 					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1396,16 +1396,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1413,7 +1413,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1439,15 +1439,15 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				OTHER_LDFLAGS = "-lViatorHardClipper";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				OTHER_LDFLAGS = "-lHard_Clipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 			};
 			name = Release;
 		};
-		62AC1C3A3D4D61D40532A6A0 = {
+		39A38805C6D88E75F3D4852C = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1490,13 +1490,13 @@
 					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1510,16 +1510,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1527,7 +1527,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1552,15 +1552,15 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 			};
 			name = Debug;
 		};
-		62A90BFF59F11967D7C35164 = {
+		9E2049CFB0DCFD8022FDF822 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
@@ -1603,13 +1603,13 @@
 					"JucePlugin_Build_Standalone=1",
 					"JucePlugin_Build_Unity=0",
 					"JucePlugin_Enable_IAA=0",
-					"JucePlugin_Name=\\\"Viator\\ Hard\\ Clipper\\\"",
-					"JucePlugin_Desc=\\\"ViatorHardClipper\\\"",
+					"JucePlugin_Name=\\\"Hard\\ Clipper\\\"",
+					"JucePlugin_Desc=\\\"Hard_Clipper\\\"",
 					"JucePlugin_Manufacturer=\\\"Viator\\ DSP\\\"",
 					"JucePlugin_ManufacturerWebsite=\\\"\\\"",
 					"JucePlugin_ManufacturerEmail=\\\"\\\"",
 					"JucePlugin_ManufacturerCode=0x4d616e75",
-					"JucePlugin_PluginCode=0x43697631",
+					"JucePlugin_PluginCode=0x54787979",
 					"JucePlugin_IsSynth=0",
 					"JucePlugin_WantsMidiInput=0",
 					"JucePlugin_ProducesMidiOutput=0",
@@ -1623,16 +1623,16 @@
 					"JucePlugin_Vst3Category=\\\"Fx\\\"",
 					"JucePlugin_AUMainType='aufx'",
 					"JucePlugin_AUSubType=JucePlugin_PluginCode",
-					"JucePlugin_AUExportPrefix=ViatorHardClipperAU",
-					"JucePlugin_AUExportPrefixQuoted=\\\"ViatorHardClipperAU\\\"",
+					"JucePlugin_AUExportPrefix=Hard_ClipperAU",
+					"JucePlugin_AUExportPrefixQuoted=\\\"Hard_ClipperAU\\\"",
 					"JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode",
-					"JucePlugin_CFBundleIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_CFBundleIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_RTASCategory=0",
 					"JucePlugin_RTASManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_RTASProductId=JucePlugin_PluginCode",
 					"JucePlugin_RTASDisableBypass=0",
 					"JucePlugin_RTASDisableMultiMono=0",
-					"JucePlugin_AAXIdentifier=com.yourcompany.ViatorHardClipper",
+					"JucePlugin_AAXIdentifier=com.yourcompany.Hard_Clipper",
 					"JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode",
 					"JucePlugin_AAXProductId=JucePlugin_PluginCode",
 					"JucePlugin_AAXCategory=0",
@@ -1640,7 +1640,7 @@
 					"JucePlugin_AAXDisableMultiMono=0",
 					"JucePlugin_IAAType=0x61757278",
 					"JucePlugin_IAASubType=JucePlugin_PluginCode",
-					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Viator\\ Hard\\ Clipper\\\"",
+					"JucePlugin_IAAName=\\\"Viator\\ DSP:\\ Hard\\ Clipper\\\"",
 					"JucePlugin_VSTNumMidiInputs=16",
 					"JucePlugin_VSTNumMidiOutputs=16",
 					"JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone",
@@ -1666,15 +1666,15 @@
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ViatorHardClipper;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Hard_Clipper;
+				PRODUCT_NAME = "Hard_Clipper";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				VALID_ARCHS = "i386 x86_64 arm64 arm64e";
 			};
 			name = Release;
 		};
-		12659C1EB8FC415CD6BBFDF3 = {
+		9E7A37FC47D64D6F15A22A72 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1716,14 +1716,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_NAME = "Hard_Clipper";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
 			name = Debug;
 		};
-		F8587EBAFD690993FA610312 = {
+		9D1CF19B644385E33D3C3A85 = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1764,296 +1764,296 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME = "ViatorHardClipper";
+				PRODUCT_NAME = "Hard_Clipper";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
-		8E46389A17A7693DD2A85AB7 = {
+		2EC76A189FB3547E0F50EBF6 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12659C1EB8FC415CD6BBFDF3,
-				F8587EBAFD690993FA610312,
+				9E7A37FC47D64D6F15A22A72,
+				9D1CF19B644385E33D3C3A85,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A24DB8FB221E2531AF1BACF2 = {
+		B01C903D11592953B573CB3E = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A3EED1ABFE6CC6EF0F2EDC9B,
-				53C0DE87CE531D359225F2B2,
+				2CA875AAED1907AC4BE51D90,
+				54C3B99972486D6AF426F247,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		06CDCF7231B119AF7FD03555 = {
+		6DD879779FE165344337B722 = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = A24DB8FB221E2531AF1BACF2;
+			buildConfigurationList = B01C903D11592953B573CB3E;
 			buildPhases = ( );
 			buildRules = ( );
 			dependencies = (
-				5BEAD55F31A93D3ED8A9B68B,
-				E1D93BA1453184A4D2F0D6DE,
-				5F963BCEDC7573D9744A12C2,
-				3617FDB86B51F5E41C01EFAE,
+				D0BDD2E07275098853C1A294,
+				F67CDF76E53269504F6AFA02,
+				08E6E4985BF0288550D1DAF4,
+				D4F8AF298A08B8601D2A1215,
 			);
-			name = "ViatorHardClipper - All";
-			productName = ViatorHardClipper;
+			name = "Hard_Clipper - All";
+			productName = "Hard_Clipper";
 		};
-		8C19FA8B0B1911DA6784A5BD = {
+		E51E5D91F792C0CA0AF5CC03 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDAE2084607797902C8CD6AD,
-				76779E509C832538544D8880,
+				FCA1C015D7D0E15511E2ECA7,
+				E87CF1D8756884E5D08E8D90,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		6E95921B0E2859BF3477C8D7 = {
+		AE71EE7147F2B5740D15831B = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3640C69B73A5385B5E7C3A99,
+				8F3421820B90EF98A8BD84A1,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4054B86DD5742CB1D5385910 = {
+		61AB1F10117EB4E8F9027518 = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F52B300703A1C605EC92EFCE,
+				AC823259DD59E53CB526B10F,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2E7A3659990ACF17B860CC80 = {
+		18B899BC890E545D0F224B80 = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA79F7711A7506DE5E71D14,
-				F39F3CE0BEA0949FFCCCE89F,
-				B63309F6095E1E6C532AA792,
-				62555C696465D7FE280F02A5,
-				660D6CE45C200411487ECED4,
-				72465C70C86992BEF51CAE64,
-				8A921BAC842BE3A28D21C0A9,
-				8420D6D4BDFEC55C901A884A,
-				A08AB2B2352B94107488BC59,
-				F04E25EAAE6AFB60DC8D0930,
-				1B12AFE2492313B1E2708761,
-				E95DBA22249C96948FE815F3,
+				6A97DF6EED1EEED8F292025E,
+				4D0445000926DC4D562C73F2,
+				BDDFE90614CF03FA0D6AD8A1,
+				D0C2002492E86F0383ABA2C0,
+				BB1146B9C3A01F967626E43B,
+				A1DB8518AB3EAA3293302281,
+				99EC458E24F96DCEE1C193B3,
+				D6BAFFBBDFEE51E1DD293B11,
+				C24C22AE2867144B5FCBDDB0,
+				A7347C4190D8D95CD4084026,
+				44B7FE27E499D2CA3BCA192B,
+				8F038475B12E85BC24869700,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		32204AFB274B520126EB988F = {
+		8560749F203976B37F7E8110 = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8C19FA8B0B1911DA6784A5BD;
+			buildConfigurationList = E51E5D91F792C0CA0AF5CC03;
 			buildPhases = (
-				6E95921B0E2859BF3477C8D7,
-				4054B86DD5742CB1D5385910,
-				2E7A3659990ACF17B860CC80,
+				AE71EE7147F2B5740D15831B,
+				61AB1F10117EB4E8F9027518,
+				18B899BC890E545D0F224B80,
 			);
 			buildRules = ( );
 			dependencies = (
-				CAA0E7310E4633A2E99FF7D8,
+				3EC5B2456EE0C32600AF112C,
 			);
-			name = "ViatorHardClipper - VST3";
-			productName = ViatorHardClipper;
-			productReference = 8885D6CE0F6000814EFAFC00;
+			name = "Hard_Clipper - VST3";
+			productName = "Hard_Clipper";
+			productReference = 51C84D2FB03B7EF101A0C2D3;
 			productType = "com.apple.product-type.bundle";
 		};
-		93915A54ECFCF97F2077D4A1 = {
+		BB640AE8619A8C0AA127E7FC = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8AFECD86807B5B7BC3A29D5,
-				7D2A01AE466C4F87B0A9DC12,
+				71BA6DBA38CF016CA8671714,
+				3E8A0935D72318B62A9A5A6F,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F6FB228FB844434FF0A72622 = {
+		70B0DA53C7961237D1785BC7 = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3640C69B73A5385B5E7C3A99,
+				8F3421820B90EF98A8BD84A1,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B15E578D681B0D88A6012959 = {
+		3A6A532AACBAA02A8335E0B9 = {
 			isa = PBXRezBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A9D2F192C0B3EE35FE4243,
+				82A4295DA84AFB30C4C38A03,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3CF613889BD6D5CD12354658 = {
+		6C8A8D9E1C93DF4982DEC250 = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A702E00BDAA92D29F21537E,
-				A40DE33BD7B8015707FFCDB9,
+				7B59D7ED1439453128AE7098,
+				84396643D126566C7499A026,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DB9F277371D5EA5C9CE77158 = {
+		0E3AB6F08512211C36B2C1E7 = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8ACB942BD6B2A46411140E40,
-				8AA79F7711A7506DE5E71D14,
-				F39F3CE0BEA0949FFCCCE89F,
-				B63309F6095E1E6C532AA792,
-				62555C696465D7FE280F02A5,
-				660D6CE45C200411487ECED4,
-				72465C70C86992BEF51CAE64,
-				8A921BAC842BE3A28D21C0A9,
-				8420D6D4BDFEC55C901A884A,
-				A08AB2B2352B94107488BC59,
-				F04E25EAAE6AFB60DC8D0930,
-				1B12AFE2492313B1E2708761,
-				E95DBA22249C96948FE815F3,
+				6A37365773DCE4CFA9AE6899,
+				6A97DF6EED1EEED8F292025E,
+				4D0445000926DC4D562C73F2,
+				BDDFE90614CF03FA0D6AD8A1,
+				D0C2002492E86F0383ABA2C0,
+				BB1146B9C3A01F967626E43B,
+				A1DB8518AB3EAA3293302281,
+				99EC458E24F96DCEE1C193B3,
+				D6BAFFBBDFEE51E1DD293B11,
+				C24C22AE2867144B5FCBDDB0,
+				A7347C4190D8D95CD4084026,
+				44B7FE27E499D2CA3BCA192B,
+				8F038475B12E85BC24869700,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C40FA0634B2AC457476BB9C = {
+		5BEAAEAFCD41D570A69D219E = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93915A54ECFCF97F2077D4A1;
+			buildConfigurationList = BB640AE8619A8C0AA127E7FC;
 			buildPhases = (
-				F6FB228FB844434FF0A72622,
-				B15E578D681B0D88A6012959,
-				3CF613889BD6D5CD12354658,
-				DB9F277371D5EA5C9CE77158,
+				70B0DA53C7961237D1785BC7,
+				3A6A532AACBAA02A8335E0B9,
+				6C8A8D9E1C93DF4982DEC250,
+				0E3AB6F08512211C36B2C1E7,
 			);
 			buildRules = ( );
 			dependencies = (
-				5813265902F58804E70FF039,
+				539EB6C8B7631F687272E715,
 			);
-			name = "ViatorHardClipper - AU";
-			productName = ViatorHardClipper;
-			productReference = 8101FC185E2C1262E37938B7;
+			name = "Hard_Clipper - AU";
+			productName = "Hard_Clipper";
+			productReference = 09313F3D90B9760BE7240A73;
 			productType = "com.apple.product-type.bundle";
 		};
-		B604AED11CE6B654B9F54253 = {
+		F7DF59ECD99533C62CE5C8C6 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8FF2418539C6F63EFADA1443,
-				EE168CB179897E0B810288A9,
+				7B71C806C095DD3ECF038A6F,
+				7399DE635629C58AB3D197AA,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		26B4D37F44D361C181675AA3 = {
+		02C04F57571579325330D95C = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3640C69B73A5385B5E7C3A99,
+				8F3421820B90EF98A8BD84A1,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D56D80C122828F22B807D15D = {
+		EAF634E019D2C2BC14B411AE = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C0B99D668EC58E563AC8BB,
+				B36D1B15D935AE0A29D587CE,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		70A14E3F5F80DB6699A5BF95 = {
+		2E2CB67CCAEC71E5D0F6713D = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8AA79F7711A7506DE5E71D14,
-				F39F3CE0BEA0949FFCCCE89F,
-				B63309F6095E1E6C532AA792,
-				62555C696465D7FE280F02A5,
-				660D6CE45C200411487ECED4,
-				72465C70C86992BEF51CAE64,
-				8A921BAC842BE3A28D21C0A9,
-				8420D6D4BDFEC55C901A884A,
-				A08AB2B2352B94107488BC59,
-				F04E25EAAE6AFB60DC8D0930,
-				1B12AFE2492313B1E2708761,
-				E95DBA22249C96948FE815F3,
+				6A97DF6EED1EEED8F292025E,
+				4D0445000926DC4D562C73F2,
+				BDDFE90614CF03FA0D6AD8A1,
+				D0C2002492E86F0383ABA2C0,
+				BB1146B9C3A01F967626E43B,
+				A1DB8518AB3EAA3293302281,
+				99EC458E24F96DCEE1C193B3,
+				D6BAFFBBDFEE51E1DD293B11,
+				C24C22AE2867144B5FCBDDB0,
+				A7347C4190D8D95CD4084026,
+				44B7FE27E499D2CA3BCA192B,
+				8F038475B12E85BC24869700,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC1285DA8C8D893789BBB6ED = {
+		7644A7FB6C1C6E907350AE3B = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B604AED11CE6B654B9F54253;
+			buildConfigurationList = F7DF59ECD99533C62CE5C8C6;
 			buildPhases = (
-				26B4D37F44D361C181675AA3,
-				D56D80C122828F22B807D15D,
-				70A14E3F5F80DB6699A5BF95,
+				02C04F57571579325330D95C,
+				EAF634E019D2C2BC14B411AE,
+				2E2CB67CCAEC71E5D0F6713D,
 			);
 			buildRules = ( );
 			dependencies = (
-				C5484698C4C6FCB59F208ECE,
+				153490B8E4EF3A391C66D2F8,
 			);
-			name = "ViatorHardClipper - Standalone Plugin";
-			productName = ViatorHardClipper;
-			productReference = 3C029925FE66C3F5A0E2D179;
+			name = "Hard_Clipper - Standalone Plugin";
+			productName = "Hard_Clipper";
+			productReference = 682FE63A84ACCF77F8336E91;
 			productType = "com.apple.product-type.application";
 		};
-		61E743AC1F2415D18336CDFB = {
+		A14E9F384BABB9418FE93D78 = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62AC1C3A3D4D61D40532A6A0,
-				62A90BFF59F11967D7C35164,
+				39A38805C6D88E75F3D4852C,
+				9E2049CFB0DCFD8022FDF822,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D4487195F6952CC775EAEE93 = {
+		A2C26397330827E2F6C0205B = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C988A74761BE8738465DBDC4,
-				CC65CBBD9C7D755FF430CA14,
-				39C4A6B68B72928DD274174D,
-				4787EEB0E8D8D443E8D8A813,
-				0D812CC3E5E0464554089ED6,
-				EED0787E948A0B24584883D1,
-				E24937FF081D8AFF3F42B3EC,
-				1A9038317E61371B03242249,
-				FCB34C61E12A4E8777A36E05,
-				03BBD419821DA01A59699FDF,
-				0FC873AB0761344C4C9F26F5,
-				2AB79DC0C4037D06A8A90337,
-				B5748C20036CC28B1D73BADB,
-				F13153207D5752040978EA8A,
-				4321D3BE66182A6297A45277,
-				AE6A2F06294EDBBBA0F7DD17,
+				63EDC9D6BC6396B55B495F94,
+				700D7D4D843ACFCE660DB998,
+				05962D50C32D61C030FAEE01,
+				088A8B4F36747BB444A9D654,
+				C992E0AAF0CFB3DE19B788A3,
+				4FF65735875C96D84B64E798,
+				6343095CACA031140CBE1FCC,
+				FB3A09F01EE2533125D3803D,
+				9D6BD45B789FD174242BA091,
+				356478FDFF13C5F835E7DF2F,
+				8BA110327B4C48C6B8B9ACB0,
+				31586F8B33F1E9BEC0F0D762,
+				7F11ABAE3C18AE53FB4D9488,
+				7B483AAF561AE6A5EA682DAB,
+				2830E221E07403CEED1D6318,
+				4CB90E2A94CD8A3A3697EBED,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		12C47641218EC07C95F0A51C = {
+		428D80FC6ADA116523F18137 = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 61E743AC1F2415D18336CDFB;
+			buildConfigurationList = A14E9F384BABB9418FE93D78;
 			buildPhases = (
-				D4487195F6952CC775EAEE93,
+				A2C26397330827E2F6C0205B,
 			);
 			buildRules = ( );
 			dependencies = ( );
-			name = "ViatorHardClipper - Shared Code";
-			productName = ViatorHardClipper;
-			productReference = B6560CE9F68912754A746BBF;
+			name = "Hard_Clipper - Shared Code";
+			productName = "Hard_Clipper";
+			productReference = 0C6C61805F9D560A16B4FE55;
 			productType = "com.apple.product-type.library.static";
 		};
-		435A45358BA5D4261334AF68 = {
+		19BAB410AB1A49DB387F7C81 = {
 			isa = PBXProject;
-			buildConfigurationList = 8E46389A17A7693DD2A85AB7;
-			attributes = { LastUpgradeCheck = 1230; ORGANIZATIONNAME = ""; TargetAttributes = { 06CDCF7231B119AF7FD03555 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };32204AFB274B520126EB988F = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };4C40FA0634B2AC457476BB9C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };FC1285DA8C8D893789BBB6ED = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };12C47641218EC07C95F0A51C = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			buildConfigurationList = 2EC76A189FB3547E0F50EBF6;
+			attributes = { LastUpgradeCheck = 1230; ORGANIZATIONNAME = ""; TargetAttributes = { 6DD879779FE165344337B722 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };8560749F203976B37F7E8110 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };5BEAAEAFCD41D570A69D219E = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };7644A7FB6C1C6E907350AE3B = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };428D80FC6ADA116523F18137 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = 89161DD74011E795183E0740;
+			mainGroup = C0B0E8B02DDACBF11A3EC68E;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (06CDCF7231B119AF7FD03555, 32204AFB274B520126EB988F, 4C40FA0634B2AC457476BB9C, FC1285DA8C8D893789BBB6ED, 12C47641218EC07C95F0A51C);
+			targets = (6DD879779FE165344337B722, 8560749F203976B37F7E8110, 5BEAAEAFCD41D570A69D219E, 7644A7FB6C1C6E907350AE3B, 428D80FC6ADA116523F18137);
 			knownRegions = (en, Base);
 		};
 	};
-	rootObject = 435A45358BA5D4261334AF68;
+	rootObject = 19BAB410AB1A49DB387F7C81;
 }

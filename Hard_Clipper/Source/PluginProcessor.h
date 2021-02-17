@@ -9,24 +9,21 @@
 #pragma once
 
 #include <JuceHeader.h>
+
 #define inputSliderId "input"
 #define inputSliderName "Input"
-
-#define driveSliderId "drive"
-#define driveSliderName "Drive"
-
 #define trimSliderId "trim"
 #define trimSliderName "Trim"
 
 //==============================================================================
 /**
 */
-class ViatorHardClipperAudioProcessor  : public juce::AudioProcessor
+class Hard_ClipperAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    ViatorHardClipperAudioProcessor();
-    ~ViatorHardClipperAudioProcessor() override;
+    Hard_ClipperAudioProcessor();
+    ~Hard_ClipperAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -60,17 +57,12 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-    float scaleRange (float input, float inputLow, float inputHigh, float outputLow, float outputHigh);
-
-
+    float scaleRange (const float &input, const float &inputLow, const float &inputHigh, const float &outputLow, const float &outputHigh);
+    
     juce::AudioProcessorValueTreeState treeState;
+    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
 
 private:
-    
-    juce::dsp::Gain<float> inputGainProcessor;
-    juce::dsp::Gain<float> outputGainProcessor;
-    
-    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ViatorHardClipperAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Hard_ClipperAudioProcessor)
 };

@@ -8,11 +8,11 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.yourcompany.ViatorHardClipper</string>
+    <string>com.yourcompany.Hard_Clipper</string>
     <key>CFBundleName</key>
-    <string>ViatorHardClipper</string>
+    <string>Hard_Clipper</string>
     <key>CFBundleDisplayName</key>
-    <string>ViatorHardClipper</string>
+    <string>Hard_Clipper</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
