@@ -22,9 +22,9 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     inputSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     inputSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 64, 32);
     inputSlider.setTextValueSuffix(" dB");
-    inputSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
+    inputSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
     inputSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
-    inputSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.0f));
+    inputSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     inputSlider.setLookAndFeel(&customDial);
     inputSlider.setComponentEffect(&dialShadow);
     inputSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputSliderId, inputSlider);
@@ -41,9 +41,9 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     trimSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     trimSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 32);
     trimSlider.setTextValueSuffix(" dB");
-    trimSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
+    trimSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
     trimSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
-    trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.0f));
+    trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     trimSlider.setLookAndFeel(&customDial);
     trimSlider.setComponentEffect(&dialShadow);
     trimSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimSliderId, trimSlider);
@@ -86,7 +86,7 @@ void Pedal_iR_PrototyperAudioProcessorEditor::resized()
     flexboxColumnOne.alignContent = juce::FlexBox::AlignContent::stretch;
                        
     juce::Array<juce::FlexItem> itemArrayColumnOne;
-    itemArrayColumnOne.add(juce::FlexItem(bounds.getWidth() / 4, bounds.getHeight() / 2, inputSlider).withMargin(juce::FlexItem::Margin(bounds.getHeight() * .5, 0, 0, 0)));
+    itemArrayColumnOne.add(juce::FlexItem(bounds.getWidth() / 4, bounds.getHeight() / 2, inputSlider).withMargin(juce::FlexItem::Margin(bounds.getHeight() * .35, 0, 0, 0)));
                        
     flexboxColumnOne.items = itemArrayColumnOne;
     flexboxColumnOne.performLayout(bounds.removeFromLeft(bounds.getWidth() / 2));
@@ -99,7 +99,7 @@ void Pedal_iR_PrototyperAudioProcessorEditor::resized()
     flexboxColumnTwo.alignContent = juce::FlexBox::AlignContent::stretch;
                        
     juce::Array<juce::FlexItem> itemArrayColumnTwo;
-    itemArrayColumnTwo.add(juce::FlexItem(bounds.getWidth() / 4, bounds.getHeight() / 2, trimSlider).withMargin(juce::FlexItem::Margin(bounds.getHeight() * .5, 0, 0, 0)));
+    itemArrayColumnTwo.add(juce::FlexItem(bounds.getWidth() / 4, bounds.getHeight() / 2, trimSlider).withMargin(juce::FlexItem::Margin(bounds.getHeight() * .35, 0, 0, 0)));
                        
     flexboxColumnTwo.items = itemArrayColumnTwo;
     flexboxColumnTwo.performLayout(bounds.removeFromLeft(bounds.getWidth()));
