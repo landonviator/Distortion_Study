@@ -15,6 +15,8 @@
     </GROUP>
     <FILE id="PHUJXe" name="highGainLowDrive.wav" compile="0" resource="1"
           file="Source/highGainLowDrive.wav"/>
+    <FILE id="nLKHJf" name="pedalbackground.png" compile="0" resource="1"
+          file="Source/pedalbackground.png"/>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>

@@ -28,15 +28,15 @@ public:
         float angle = rotaryStartAngle + (sliderPos * (rotaryEndAngle - rotaryStartAngle));
         
         juce::Rectangle<float> dialArea (rx, ry, diameter, diameter);
-        g.setColour(juce::Colour::fromFloatRGBA(0.15, 0.15, 0.15, 1)); //center
-        g.setGradientFill(juce::ColourGradient::horizontal(juce::Colour::fromFloatRGBA(0.1, 0.1, 0.1, 1), centerY * .25, juce::Colour::fromFloatRGBA(0.15, 0.15, 0.15, 1), centerY * 2.5));
+        g.setColour(juce::Colour::fromFloatRGBA(0.15, 0.15, 0.15, 0.0)); //center
+        //g.setGradientFill(juce::ColourGradient::horizontal(juce::Colour::fromFloatRGBA(0.1, 0.1, 0.1, 1), centerY * .25, juce::Colour::fromFloatRGBA(0.15, 0.15, 0.15, 1), centerY * 2.5));
         g.fillEllipse(dialArea);
-        g.setColour(juce::Colour::fromFloatRGBA(0.392f, 0.584f, 0.929f, 0.5f)); //tick color
+        g.setColour(juce::Colour::fromFloatRGBA(0, 0, 0, 0.5f)); //tick color
 
         juce::Path dialTick;
         dialTick.addRectangle(0, -radius + 3, 3.0f, radius * 0.452211);
         g.fillPath(dialTick, juce::AffineTransform::rotation(angle).translated(centerX, centerY));
-        g.setColour(juce::Colour::fromFloatRGBA(0, 0, 0, .25)); //outline
+        g.setColour(juce::Colour::fromFloatRGBA(0, 0, 0, 0.0)); //outline
         g.drawEllipse(rx, ry, diameter, diameter, 1.0f);
     }
 };
@@ -52,6 +52,8 @@ public:
     void resized() override;
 
 private:
+    juce::Image plugbackground;
+    
     ViatorDial customDial;
     juce::DropShadow shadowProperties;
     juce::DropShadowEffect dialShadow;

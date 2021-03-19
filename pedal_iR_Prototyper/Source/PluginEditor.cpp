@@ -20,13 +20,13 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     //Input slider
     addAndMakeVisible(inputSlider);
     inputSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    inputSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 64, 32);
+    inputSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 32);
     inputSlider.setTextValueSuffix(" dB");
     inputSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
     inputSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
     inputSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     inputSlider.setLookAndFeel(&customDial);
-    inputSlider.setComponentEffect(&dialShadow);
+    //inputSlider.setComponentEffect(&dialShadow);
     inputSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputSliderId, inputSlider);
     inputSlider.setRange(-24.0, 24.0, 0.25);
     
@@ -45,7 +45,7 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     trimSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
     trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
     trimSlider.setLookAndFeel(&customDial);
-    trimSlider.setComponentEffect(&dialShadow);
+    //trimSlider.setComponentEffect(&dialShadow);
     trimSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimSliderId, trimSlider);
     trimSlider.setRange(-24.0, 24.0, 0.25);
     
@@ -72,6 +72,10 @@ void Pedal_iR_PrototyperAudioProcessorEditor::paint (juce::Graphics& g)
         g.setColour (juce::Colours::white.darker(1.0));
         g.setFont (36.0f);
         g.drawFittedText ("Pedal Simulator", 0, 24, AudioProcessorEditor::getWidth(), AudioProcessorEditor::getHeight(), juce::Justification::centredTop, 1);
+    
+    //Image layer from Illustrator
+    plugbackground = juce::ImageCache::getFromMemory(BinaryData::pedalbackground_png, BinaryData::pedalbackground_pngSize);
+    g.drawImageWithin(plugbackground, 0, 0, AudioProcessorEditor::getWidth(), AudioProcessorEditor::getHeight(), juce::RectanglePlacement::stretchToFit);
 }
 
 void Pedal_iR_PrototyperAudioProcessorEditor::resized()

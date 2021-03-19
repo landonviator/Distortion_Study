@@ -11,8 +11,11 @@ namespace BinaryData
     extern const char*   highGainLowDrive_wav;
     const int            highGainLowDrive_wavSize = 1640;
 
+    extern const char*   pedalbackground_png;
+    const int            pedalbackground_pngSize = 14748;
+
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 1;
+    const int namedResourceListSize = 2;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
