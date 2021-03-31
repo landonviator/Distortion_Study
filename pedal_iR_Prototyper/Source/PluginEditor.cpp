@@ -22,38 +22,38 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     inputSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     inputSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 32);
     inputSlider.setTextValueSuffix(" dB");
-    inputSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
-    inputSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
-    inputSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
+    inputSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
+    inputSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
+    inputSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0));
     inputSlider.setLookAndFeel(&customDial);
     //inputSlider.setComponentEffect(&dialShadow);
     inputSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputSliderId, inputSlider);
-    inputSlider.setRange(-24.0, 24.0, 0.25);
+    inputSlider.setRange(-9.0, 9.0, 0.25);
     
-    addAndMakeVisible(inputLabel);
-    inputLabel.setText("Input", juce::dontSendNotification);
-    inputLabel.setJustificationType(juce::Justification::centred);
-    inputLabel.setColour(0x1000281, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
-    inputLabel.attachToComponent(&inputSlider, false);
+//    addAndMakeVisible(inputLabel);
+//    inputLabel.setText("Input", juce::dontSendNotification);
+//    inputLabel.setJustificationType(juce::Justification::centred);
+//    inputLabel.setColour(0x1000281, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
+//    inputLabel.attachToComponent(&inputSlider, false);
                 
     //Trim slider
     addAndMakeVisible(trimSlider);
     trimSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     trimSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 32);
     trimSlider.setTextValueSuffix(" dB");
-    trimSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
-    trimSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0.0f));
-    trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0.25f));
+    trimSlider.setColour(0x1001400, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
+    trimSlider.setColour(0x1001700, juce::Colour::fromFloatRGBA(1, 1, 1, 0));
+    trimSlider.setColour(0x1001500, juce::Colour::fromFloatRGBA(0, 0, 0, 0));
     trimSlider.setLookAndFeel(&customDial);
     //trimSlider.setComponentEffect(&dialShadow);
     trimSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, trimSliderId, trimSlider);
     trimSlider.setRange(-24.0, 24.0, 0.25);
     
-    addAndMakeVisible(trimLabel);
-    trimLabel.setText("Trim", juce::dontSendNotification);
-    trimLabel.setJustificationType(juce::Justification::centred);
-    trimLabel.setColour(0x1000281, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
-    trimLabel.attachToComponent(&trimSlider, false);
+//    addAndMakeVisible(trimLabel);
+//    trimLabel.setText("Trim", juce::dontSendNotification);
+//    trimLabel.setJustificationType(juce::Justification::centred);
+//    trimLabel.setColour(0x1000281, juce::Colour::fromFloatRGBA(1, 1, 1, 0.25f));
+//    trimLabel.attachToComponent(&trimSlider, false);
     
     setSize (400, 300);
 }
@@ -74,7 +74,7 @@ void Pedal_iR_PrototyperAudioProcessorEditor::paint (juce::Graphics& g)
         g.drawFittedText ("Pedal Simulator", 0, 24, AudioProcessorEditor::getWidth(), AudioProcessorEditor::getHeight(), juce::Justification::centredTop, 1);
     
     //Image layer from Illustrator
-    plugbackground = juce::ImageCache::getFromMemory(BinaryData::pedalbackground_png, BinaryData::pedalbackground_pngSize);
+    plugbackground = juce::ImageCache::getFromMemory(BinaryData::pedal_background_png, BinaryData::pedal_background_pngSize);
     g.drawImageWithin(plugbackground, 0, 0, AudioProcessorEditor::getWidth(), AudioProcessorEditor::getHeight(), juce::RectanglePlacement::stretchToFit);
 }
 

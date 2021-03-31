@@ -109,8 +109,8 @@ void Pedal_iR_PrototyperAudioProcessor::prepareToPlay (double sampleRate, int sa
     trimProcessor.reset();
             
     convolutionProcessor.loadImpulseResponse
-        (BinaryData::highGainLowDrive_wav,
-         BinaryData::highGainLowDrive_wavSize,
+        (BinaryData::pedalAt12_wav,
+         BinaryData::pedalAt12_wavSize,
          juce::dsp::Convolution::Stereo::yes,
          juce::dsp::Convolution::Trim::yes, 0,
          juce::dsp::Convolution::Normalise::yes);
@@ -171,7 +171,10 @@ void Pedal_iR_PrototyperAudioProcessor::processBlock (juce::AudioBuffer<float>& 
         auto* outputData = buffer.getWritePointer (channel);
         
         for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
-            outputData[sample] = 2/3.14 * atan(inputData[sample] * 12.0);
+            
+            float overdrive = (-18 * pow(inputData[sample], 3)) + (23 * pow(inputData[sample], 2)) - (5 * inputData[sample]);
+            
+            outputData[sample] = overdrive;
         }
     }
     
@@ -210,7 +213,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout Pedal_iR_PrototyperAudioProc
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
     params.reserve(2);
     
-    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, -24.0f, 24.0f, 0.0f);
+    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, -9.0f, 9.0f, 0.0f);
     auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimSliderId, trimSliderName, -24.0f, 24.0f, 0.0f);
 
     params.push_back(std::move(inputParam));

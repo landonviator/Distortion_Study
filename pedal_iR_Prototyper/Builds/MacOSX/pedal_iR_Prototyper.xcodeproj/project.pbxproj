@@ -221,13 +221,6 @@
 			path = "/Users/land00m/Documents/JUCE/modules/juce_audio_devices";
 			sourceTree = "<absolute>";
 		};
-		2DA39BB20CA9BA5A1E5CD426 = {
-			isa = PBXFileReference;
-			lastKnownFileType = image.png;
-			name = pedalbackground.png;
-			path = ../../Source/pedalbackground.png;
-			sourceTree = "SOURCE_ROOT";
-		};
 		2E6641308B160E10DEABCFD8 = {
 			isa = PBXFileReference;
 			lastKnownFileType = sourcecode.cpp.objcpp;
@@ -368,6 +361,13 @@
 			path = "/Users/land00m/Documents/JUCE/modules/juce_data_structures";
 			sourceTree = "<absolute>";
 		};
+		7A2A514FC480D9FC226D8A29 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.wav;
+			name = pedalAt12.wav;
+			path = ../../Source/pedalAt12.wav;
+			sourceTree = "SOURCE_ROOT";
+		};
 		7BF9876DEC752EC528F00A2B = {
 			isa = PBXFileReference;
 			lastKnownFileType = file;
@@ -444,6 +444,13 @@
 			name = DiscRecording.framework;
 			path = System/Library/Frameworks/DiscRecording.framework;
 			sourceTree = SDKROOT;
+		};
+		B28B00C8704D6B13BA8B160D = {
+			isa = PBXFileReference;
+			lastKnownFileType = image.png;
+			name = "pedal_background.png";
+			path = "../../Source/pedal_background.png";
+			sourceTree = "SOURCE_ROOT";
 		};
 		BE347B5198C151675FF9D289 = {
 			isa = PBXFileReference;
@@ -622,7 +629,8 @@
 			children = (
 				5BBE3EB7E5CB95206F80D202,
 				BE347B5198C151675FF9D289,
-				2DA39BB20CA9BA5A1E5CD426,
+				B28B00C8704D6B13BA8B160D,
+				7A2A514FC480D9FC226D8A29,
 			);
 			name = "pedal_iR_Prototyper";
 			sourceTree = "<group>";
@@ -796,7 +804,7 @@
 					"DEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -871,7 +879,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -883,7 +891,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -915,7 +923,7 @@
 					"NDEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -990,7 +998,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1003,7 +1011,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1036,7 +1044,7 @@
 					"DEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1111,7 +1119,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1123,7 +1131,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1156,7 +1164,7 @@
 					"NDEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1231,7 +1239,7 @@
 				GENERATE_PKGINFO_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1244,7 +1252,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1276,7 +1284,7 @@
 					"DEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1350,7 +1358,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1360,7 +1368,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1389,7 +1397,7 @@
 					"NDEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1463,7 +1471,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1474,7 +1482,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1504,7 +1512,7 @@
 					"DEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1579,7 +1587,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1588,7 +1596,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -1617,7 +1625,7 @@
 					"NDEBUG=1",
 					"JUCE_DISPLAY_SPLASH_SCREEN=1",
 					"JUCE_USE_DARK_SPLASH_SCREEN=1",
-					"JUCE_PROJUCER_VERSION=0x60007",
+					"JUCE_PROJUCER_VERSION=0x60005",
 					"JUCE_MODULE_AVAILABLE_juce_audio_basics=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_devices=1",
 					"JUCE_MODULE_AVAILABLE_juce_audio_formats=1",
@@ -1692,7 +1700,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 					"$(inherited)",
@@ -1702,7 +1710,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = (
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
+					"../../JuceLibraryCode",
 					"/Users/land00m/Documents/JUCE/modules",
 					"/Users/land00m/Documents/JUCE/modules/juce_audio_plugin_client",
 				);
@@ -2085,7 +2093,7 @@
 		E0D96B439ACF3C3759A2EEFF = {
 			isa = PBXProject;
 			buildConfigurationList = 6D14426D69D562099EE2A144;
-			attributes = { LastUpgradeCheck = 1230; ORGANIZATIONNAME = ""; TargetAttributes = { 4DAD9B1779C988D2392B9AE9 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };FE1106F9D9DBBBB728C968D9 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };A87413531D402B4C9EC76B3F = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };44B720FE311564C6E7F04F07 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };E099F01AB7527D4286E312F6 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
+			attributes = { LastUpgradeCheck = 1200; ORGANIZATIONNAME = ""; TargetAttributes = { 4DAD9B1779C988D2392B9AE9 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };FE1106F9D9DBBBB728C968D9 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };A87413531D402B4C9EC76B3F = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };44B720FE311564C6E7F04F07 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; };E099F01AB7527D4286E312F6 = { SystemCapabilities = {com.apple.ApplicationGroups.iOS = { enabled = 0; }; com.apple.InAppPurchase = { enabled = 0; }; com.apple.InterAppAudio = { enabled = 0; }; com.apple.Push = { enabled = 0; }; com.apple.Sandbox = { enabled = 0; }; com.apple.HardenedRuntime = { enabled = 0; }; }; }; }; };
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
 			mainGroup = 68BDB40F27821712A2901AA0;
