@@ -28,7 +28,7 @@ Pedal_iR_PrototyperAudioProcessorEditor::Pedal_iR_PrototyperAudioProcessorEditor
     inputSlider.setLookAndFeel(&customDial);
     //inputSlider.setComponentEffect(&dialShadow);
     inputSliderAttach = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(audioProcessor.treeState, inputSliderId, inputSlider);
-    inputSlider.setRange(-9.0, 9.0, 0.25);
+    inputSlider.setRange(-15.0, 7.0, 0.25);
     
 //    addAndMakeVisible(inputLabel);
 //    inputLabel.setText("Input", juce::dontSendNotification);

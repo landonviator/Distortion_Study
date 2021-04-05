@@ -66,6 +66,8 @@ private:
     float lastSampleRate;
     juce::dsp::Gain<float> inputProcessor;
     juce::dsp::Convolution convolutionProcessor;
+    juce::dsp::WaveShaper<float> firstAtan;
+    juce::dsp::WaveShaper<float> secondAtan;
     juce::dsp::Gain<float> trimProcessor;
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Pedal_iR_PrototyperAudioProcessor)

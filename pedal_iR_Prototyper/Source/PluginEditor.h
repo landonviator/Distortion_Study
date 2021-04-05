@@ -34,8 +34,8 @@ public:
         g.setColour(juce::Colour::fromFloatRGBA(0, 0, 0, 0.5f)); //tick color
 
         juce::Path dialTick;
-        dialTick.addRectangle(0, -radius + 3, 3.0f, radius * 0.452211);
-        g.fillPath(dialTick, juce::AffineTransform::rotation(angle).translated(centerX, centerY));
+        dialTick.addRectangle(0, -radius + 3, 5.0f, radius * 0.5);
+        g.fillPath(dialTick, juce::AffineTransform::rotation(angle).translated(centerX - 1, centerY));
         g.setColour(juce::Colour::fromFloatRGBA(0, 0, 0, 0.0)); //outline
         g.drawEllipse(rx, ry, diameter, diameter, 1.0f);
     }
