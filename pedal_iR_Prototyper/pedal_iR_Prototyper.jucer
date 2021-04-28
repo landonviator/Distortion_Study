@@ -5,6 +5,8 @@
               jucerFormatVersion="1" pluginName="Pedal IR" pluginManufacturer="Viator DSP">
   <MAINGROUP id="sEQZJu" name="pedal_iR_Prototyper">
     <GROUP id="{BB64C92A-268F-6201-2B7B-2D5065B27630}" name="Source">
+      <FILE id="Hqcm97" name="pedalOverdrive.wav" compile="0" resource="1"
+            file="Source/pedalOverdrive.wav"/>
       <FILE id="q65OWE" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="LK5n2Z" name="PluginProcessor.h" compile="0" resource="0"
@@ -13,11 +15,8 @@
             file="Source/PluginEditor.cpp"/>
       <FILE id="X0bCf4" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
-    <FILE id="PHUJXe" name="highGainLowDrive.wav" compile="0" resource="1"
-          file="Source/highGainLowDrive.wav"/>
     <FILE id="uRzx4M" name="pedal_background.png" compile="0" resource="1"
           file="Source/pedal_background.png"/>
-    <FILE id="MKF69z" name="pedalAt12.wav" compile="0" resource="1" file="Source/pedalAt12.wav"/>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
   <EXPORTFORMATS>

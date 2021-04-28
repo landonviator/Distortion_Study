@@ -12,13 +12,15 @@
 
 #define inputSliderId "input"
 #define inputSliderName "Input"
+#define toneSliderId "tone"
+#define toneSliderName "Tone"
 #define trimSliderId "trim"
 #define trimSliderName "Trim"
 
 //==============================================================================
 /**
 */
-class Pedal_iR_PrototyperAudioProcessor  : public juce::AudioProcessor
+class Pedal_iR_PrototyperAudioProcessor  : public juce::AudioProcessor, public juce::AudioProcessorValueTreeState::Listener
 {
 public:
     //==============================================================================
@@ -57,13 +59,18 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    void parameterChanged (const juce::String& parameterID, float newValue) override;
+    void updateToneFilter(const float &gain);
     
     juce::AudioProcessorValueTreeState treeState;
     juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
 
 private:
     
-    float lastSampleRate;
+    float lastSampleRate{44100.0};
+    
+    juce::dsp::ProcessorDuplicator<juce::dsp::IIR::Filter<float>, juce::dsp::IIR::Coefficients<float>> toneFilter;
+    
     juce::dsp::Gain<float> inputProcessor;
     juce::dsp::Convolution convolutionProcessor;
     juce::dsp::WaveShaper<float> firstAtan;

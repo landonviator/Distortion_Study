@@ -20,13 +20,20 @@ Pedal_iR_PrototyperAudioProcessor::Pedal_iR_PrototyperAudioProcessor()
                        .withOutput ("Output", juce::AudioChannelSet::stereo(), true)
                      #endif
                        ),
-treeState (*this, nullptr, "PARAMETER", createParameterLayout())
+treeState (*this, nullptr, "PARAMETER", createParameterLayout()),
+toneFilter(juce::dsp::IIR::Coefficients<float>::makeHighShelf(lastSampleRate, 2020.0, 0.47, 0.0))
 #endif
 {
+    treeState.addParameterListener (inputSliderId, this);
+    treeState.addParameterListener (toneSliderId, this);
+    treeState.addParameterListener (trimSliderId, this);
 }
 
 Pedal_iR_PrototyperAudioProcessor::~Pedal_iR_PrototyperAudioProcessor()
 {
+    treeState.removeParameterListener (inputSliderId, this);
+    treeState.removeParameterListener (toneSliderId, this);
+    treeState.removeParameterListener (trimSliderId, this);
 }
 
 //==============================================================================
@@ -101,19 +108,26 @@ void Pedal_iR_PrototyperAudioProcessor::prepareToPlay (double sampleRate, int sa
     
     inputProcessor.prepare(spec);
     inputProcessor.reset();
+    inputProcessor.setGainDecibels(*treeState.getRawParameterValue(inputSliderId));
     
     convolutionProcessor.prepare(spec);
     convolutionProcessor.reset();
     
     trimProcessor.prepare(spec);
     trimProcessor.reset();
+    trimProcessor.setGainDecibels(*treeState.getRawParameterValue(trimSliderId));
             
     convolutionProcessor.loadImpulseResponse
-        (BinaryData::pedalAt12_wav,
-         BinaryData::pedalAt12_wavSize,
+        (BinaryData::pedalOverdrive_wav,
+         BinaryData::pedalOverdrive_wavSize,
          juce::dsp::Convolution::Stereo::yes,
          juce::dsp::Convolution::Trim::yes, 0,
          juce::dsp::Convolution::Normalise::yes);
+    
+    toneFilter.prepare(spec);
+    toneFilter.reset();
+    
+    updateToneFilter(*treeState.getRawParameterValue(toneSliderId));
     
     firstAtan.prepare(spec);
     firstAtan.reset();
@@ -161,36 +175,40 @@ bool Pedal_iR_PrototyperAudioProcessor::isBusesLayoutSupported (const BusesLayou
 void Pedal_iR_PrototyperAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
 {
     juce::ScopedNoDenormals noDenormals;
-    auto totalNumInputChannels  = getTotalNumInputChannels();
-    auto totalNumOutputChannels = getTotalNumOutputChannels();
-    
-    auto* rawInput = treeState.getRawParameterValue(inputSliderId);
-    auto* rawTrim = treeState.getRawParameterValue(trimSliderId);
-
+    //auto totalNumInputChannels  = getTotalNumInputChannels();
+    //auto totalNumOutputChannels = getTotalNumOutputChannels();
 
     juce::dsp::AudioBlock<float> audioBlock {buffer};
     
-    convolutionProcessor.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
-    
-    inputProcessor.setGainDecibels(*rawInput);
     inputProcessor.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
     
     firstAtan.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
     
-    for (int channel = 0; channel < totalNumInputChannels; ++channel)
-    {
-        auto* inputData = buffer.getReadPointer (channel);
-        auto* outputData = buffer.getWritePointer (channel);
-
-        for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
-
-            outputData[sample] = (-18 * pow(inputData[sample], 3)) + (23 * pow(inputData[sample], 2)) - (5 * inputData[sample]);
-
-        }
-    }
+    convolutionProcessor.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
+    
+    toneFilter.process(juce::dsp::ProcessContextReplacing<float>(audioBlock));
+    
+    trimProcessor.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
+    
+//    for (int channel = 0; channel < totalNumInputChannels; ++channel)
+//    {
+//        auto* inputData = buffer.getReadPointer (channel);
+//        auto* outputData = buffer.getWritePointer (channel);
+//
+//        for (int sample = 0; sample < buffer.getNumSamples(); sample++) {
+//
+//            outputData[sample] = (-18 * pow(inputData[sample], 3)) + (23 * pow(inputData[sample], 2)) - (5 * inputData[sample]);
+//
+//        }
+//    }
     
     
-    secondAtan.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
+   //secondAtan.process(juce::dsp::ProcessContextReplacing<float> (audioBlock));
+}
+
+void Pedal_iR_PrototyperAudioProcessor::updateToneFilter(const float &gain){
+    *toneFilter.state = *juce::dsp::IIR::Coefficients<float>::makeHighShelf(lastSampleRate, 2020.0, 0.47, pow(10, gain / 20));
+
 }
 
 //==============================================================================
@@ -207,26 +225,41 @@ juce::AudioProcessorEditor* Pedal_iR_PrototyperAudioProcessor::createEditor()
 //==============================================================================
 void Pedal_iR_PrototyperAudioProcessor::getStateInformation (juce::MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    juce::MemoryOutputStream stream(destData, false);
+    treeState.state.writeToStream (stream);
 }
 
 void Pedal_iR_PrototyperAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    juce::ValueTree tree = juce::ValueTree::readFromData (data, size_t (sizeInBytes));
+        
+        if (tree.isValid())
+        {
+            treeState.state = tree;
+        }
+}
+
+void Pedal_iR_PrototyperAudioProcessor::parameterChanged(const juce::String &parameterID, float newValue){
+    if (parameterID == toneSliderId){
+        updateToneFilter(newValue);
+    } else if (parameterID == inputSliderId){
+        inputProcessor.setGainDecibels(newValue);
+    } else {
+        trimProcessor.setGainDecibels(newValue);
+    }
 }
 
 juce::AudioProcessorValueTreeState::ParameterLayout Pedal_iR_PrototyperAudioProcessor::createParameterLayout()
 {
     std::vector <std::unique_ptr<juce::RangedAudioParameter>> params;
-    params.reserve(2);
+    params.reserve(3);
     
-    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, -15.0f, 7.0f, 0.0f);
+    auto inputParam = std::make_unique<juce::AudioParameterFloat>(inputSliderId, inputSliderName, 0.0, 24.0, 24.0f);
+    auto toneParam = std::make_unique<juce::AudioParameterFloat>(toneSliderId, toneSliderName, -12.0, 12.0, 0.0f);
     auto trimParam = std::make_unique<juce::AudioParameterFloat>(trimSliderId, trimSliderName, -24.0f, 24.0f, 0.0f);
 
     params.push_back(std::move(inputParam));
+    params.push_back(std::move(toneParam));
     params.push_back(std::move(trimParam));
     
     return { params.begin(), params.end() };
